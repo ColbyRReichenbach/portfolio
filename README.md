@@ -1,2 +1,2 @@
 # Portfolio
-This Repositroy hosts a github pages site for my personal portfolio.
+This Repository hosts a github pages site for my personal portfolio.
