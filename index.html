@@ -49,47 +49,57 @@
 <section id="portfolio" class="portfolio-section">
   <div class="portfolio-container">
     <h2>My Projects</h2>
-    <div class="projects-slider">
-      <button class="arrow left-arrow" id="leftArrow" onclick="prevSlide()">&lt;</button>
-      <div class="slider-container">
-        <!-- Six Project Cards -->
-        <div class="project-card" onclick="openModal('modal_ad')">
-          <img src="static/images/ad.jpg" alt="Project 1 Preview">
-          <h3>Ad Performance Analysis and AB - Testing</h3>
-          <p>This project contains comprehensive data anlysis focused on A/B testing for social media ad campaigns</p>
-          <button class="btn btn-view" onclick="openModal('modal1'); event.stopPropagation();">Preview</button>
-        </div>
-        <div class="project-card" onclick="openModal('modal_ecommerce')">
-          <img src="static/images/ecommerce.jpg" alt="Project 2 Preview">
-          <h3>Ecommerce Analytics Dashboard</h3>
-          <p>Hosts an internal analytics dashboard built in streamlit</p>
-          <button class="btn btn-view" onclick="openModal('modal2'); event.stopPropagation();">Preview</button>
-        </div>
-        <div class="project-card" onclick="openModal('modal_customer_churn')">
-          <img src="static/images/project3.jpg" alt="Project 3 Preview">
-          <h3>Customer Churn Anlaysis</h3>
-          <p>Analyzes customer churn behavior, and develops data-driven retention strategies</p>
-          <button class="btn btn-view" onclick="openModal('modal3'); event.stopPropagation();">Preview</button>
-        </div>
-        <div class="project-card" onclick="openModal('modal_mlb_dash')">
-          <img src="static/images/project4.jpg" alt="Project 4 Preview">
-          <h3>MLB Award Winner Visualization</h3>
-          <p>An interactive tableau visualization</p>
-          <button class="btn btn-view" onclick="openModal('modal4'); event.stopPropagation();">Preview</button>
-        </div>
-        <div class="project-card" onclick="openModal('modal_heart')">
-          <img src="static/images/project5.jpg" alt="Project 5 Preview">
-          <h3>Heart Disease EDA and Predictive Modeling</h3>
-          <p>Analyzes heart disease risk using machine learning models</p>
-          <button class="btn btn-view" onclick="openModal('modal5'); event.stopPropagation();">Preview</button>
-        </div>
-        <div class="project-card" onclick="openModal('modal6')">
-          <img src="static/images/project6.jpg" alt="Project 6 Preview">
-          <h3>Project Title 6</h3>
-          <p>Short description of Project 6.</p>
-          <button class="btn btn-view" onclick="openModal('modal6'); event.stopPropagation();">Preview</button>
-        </div>
-      </div>
+    <div class="projects-slider"> <button class="arrow left-arrow" id="leftArrow" onclick="prevSlide()">&lt;</button>
+      <div class="slider-container"> <div class="slide-group">
+          <div class="project-card" onclick="openModal('modal_ad')">
+            <img src="static/images/ad.jpg" alt="Ad Performance Analysis Preview">
+            <div class="project-card-content">
+              <h3>Ad Performance Analysis and AB - Testing</h3>
+              <p>Comprehensive data analysis focused on A/B testing for social media ad campaigns.</p>
+              <button class="btn btn-view" onclick="openModal('modal_ad'); event.stopPropagation();">Preview</button>
+            </div>
+          </div>
+          <div class="project-card" onclick="openModal('modal_ecommerce')">
+            <img src="static/images/ecommerce.jpg" alt="Ecommerce Analytics Dashboard Preview">
+            <div class="project-card-content">
+              <h3>Ecommerce Analytics Dashboard</h3>
+              <p>Hosts an internal analytics dashboard built in Streamlit for e-commerce data.</p>
+              <button class="btn btn-view" onclick="openModal('modal_ecommerce'); event.stopPropagation();">Preview</button>
+            </div>
+          </div>
+          <div class="project-card" onclick="openModal('modal_customer_churn')">
+            <img src="static/images/project3.jpg" alt="Customer Churn Analysis Preview">
+            <div class="project-card-content">
+              <h3>Customer Churn Analysis</h3>
+              <p>Analyzes customer churn behavior and develops data-driven retention strategies.</p>
+              <button class="btn btn-view" onclick="openModal('modal_customer_churn'); event.stopPropagation();">Preview</button>
+            </div>
+          </div>
+          <div class="project-card" onclick="openModal('modal_mlb_dash')">
+            <img src="static/images/project4.jpg" alt="MLB Award Winner Visualization Preview">
+            <div class="project-card-content">
+              <h3>MLB Award Winner Visualization</h3>
+              <p>An interactive Tableau visualization of MLB award winners and their stats.</p>
+              <button class="btn btn-view" onclick="openModal('modal_mlb_dash'); event.stopPropagation();">Preview</button>
+            </div>
+          </div>
+        </div> <div class="slide-group">
+          <div class="project-card" onclick="openModal('modal_heart')">
+            <img src="static/images/project5.jpg" alt="Heart Disease EDA Preview">
+            <div class="project-card-content">
+              <h3>Heart Disease EDA and Predictive Modeling</h3>
+              <p>Analyzes heart disease risk using machine learning models and EDA techniques.</p>
+              <button class="btn btn-view" onclick="openModal('modal_heart'); event.stopPropagation();">Preview</button>
+            </div>
+          </div>
+          <div class="project-card" onclick="openModal('modal6')"> <img src="static/images/project6.jpg" alt="Project 6 Preview">
+            <div class="project-card-content">
+              <h3>Project Title 6</h3>
+              <p>Short description of Project 6. (Update with actual details)</p>
+              <button class="btn btn-view" onclick="openModal('modal6'); event.stopPropagation();">Preview</button>
+            </div>
+          </div>
+          </div> </div>
       <button class="arrow right-arrow" id="rightArrow" onclick="nextSlide()">&gt;</button>
     </div>
   </div>
