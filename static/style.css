@@ -123,7 +123,7 @@ h1 {
 /* Portfolio Section */
 .portfolio-section {
   padding: 60px 20px;
-  background: #e1e1e1;
+  background: #e9e9e9;
 }
 
 html {
@@ -131,73 +131,98 @@ html {
 }
 
 .portfolio-container {
-  max-width: 1200px;
+  max-width: 1000px; /* Adjust if needed for your 2x2 grid */
   margin: 0 auto;
   text-align: center;
 }
 
 .portfolio-container h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
 }
 
-/* Projects Slider Container */
+/* --- SLIDER STYLES REVISED --- */
 .projects-slider {
   position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
+  overflow: hidden; /* This clips the content outside the viewport */
+  width: 100%; /* Or a specific max-width if you want the slider itself to be narrower */
+  margin: 0 auto; /* Center the slider if it has a max-width */
+  padding: 0 50px; /* Space for arrows if they are outside the slide-container */
 }
 
-/* Slider container holds all project cards in a row */
-.slider-container {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease;
-  padding: 15px;
+.slider-container { /* This container holds all .slide-group divs */
+  display: flex; /* Lays out slide-groups horizontally */
+  transition: transform 0.5s ease-in-out; /* Animation for sliding */
+  /* Width will be set by the number of slides, e.g., 200% for 2 slides */
 }
 
-/* Each project card occupies half the slider width (minus the gap) */
+.slide-group {
+  flex: 0 0 100%; /* Each slide-group takes the full width of .projects-slider */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  /* grid-template-rows: repeat(2, auto); Implicitly two rows if cards are square */
+  gap: 25px; /* Gap between project cards */
+  padding: 10px; /* Optional padding within each slide group */
+  box-sizing: border-box;
+}
+
 .project-card {
-  flex: 0 0 calc(50% - 20px);
+  aspect-ratio: 1 / 1; /* Make the card square */
   background: #fafafa;
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-/* Scale down project images so they stay within the card borders */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
 .project-card img {
   width: 100%;
-  max-height: 120px;  /* Reduced height */
+  height: 55%; /* Image takes about 55% of the card's height */
   object-fit: cover;
-  border-radius: 20px;
-  margin-bottom: 15px;
+  display: block;
+}
+
+.project-card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  height: 45%; /* Remaining height */
 }
 
 .project-card h3 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #333;
 }
 
 .project-card p {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  flex-grow: 1;
 }
 
-.btn-project {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 20px;
-  display: inline-block;
+.btn-view {
+  padding: 8px 15px;
+  font-size: 0.85rem;
+  background-color: #555;
+  align-self: flex-start;
 }
-
-.btn-project:hover {
-  background: #555;
+.btn-view:hover {
+  background-color: #333;
 }
 
 /* Navigation Arrows */
@@ -205,21 +230,80 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
   color: #fff;
   border: none;
-  padding: 10px 15px;
+  padding: 12px 18px; /* Slightly larger padding */
+  font-size: 1.5rem; /* Larger arrow icon */
   cursor: pointer;
   z-index: 10;
+  border-radius: 50%; /* Make arrows circular */
+  line-height: 1; /* Align text better in circle */
+  width: 45px; /* Explicit width */
+  height: 45px; /* Explicit height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+.arrow:hover {
+    background: rgba(0,0,0,0.8);
 }
 
 .left-arrow {
-  left: 10px;
+  left: 5px; /* Position from the edge of .projects-slider */
 }
 
 .right-arrow {
-  right: 10px;
+  right: 5px; /* Position from the edge of .projects-slider */
 }
+
+.arrow.hidden { /* To hide arrows when at beginning or end */
+  display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .portfolio-container {
+        max-width: 100%; /* Allow it to be full width */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .projects-slider {
+      padding: 0 45px; /* Adjust arrow padding for smaller screens */
+    }
+    .slide-group {
+        gap: 15px; /* Reduce gap on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+  /* Hero and other general responsive styles (Keep existing) */
+  .projects-slider {
+    padding: 0; /* Remove padding if arrows move or layout changes drastically */
+  }
+  .slide-group {
+    grid-template-columns: 1fr; /* Stack to 1 column */
+    /* If 1 column, likely don't need 2 rows explicitly. aspect-ratio on card will define height */
+    padding: 5px;
+  }
+  .project-card {
+    aspect-ratio: unset; /* Remove square constraint if it looks odd in single column */
+    min-height: 320px; /* Or let content define height */
+  }
+  .project-card img {
+    height: 180px; /* Adjust image height for single column layout */
+  }
+  .arrow { /* Potentially reposition or resize arrows for mobile */
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+  }
+  .left-arrow { left: 0px; }
+  .right-arrow { right: 0px; }
+}
+
 
 .arrow.hidden {
   display: none;
