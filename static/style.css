@@ -160,8 +160,9 @@ html {
 .slide-group {
   flex: 0 0 100%; /* Each slide-group takes the full width of .projects-slider */
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  /* grid-template-rows: repeat(2, auto); Implicitly two rows if cards are square */
+  grid-template-columns: repeat(2, 1fr); /* We still want 2 columns */
+  grid-template-rows: repeat(2, 1fr);    /* And we want space for 2 rows to make the 2x2 structure */
+  grid-auto-flow: column; /* THIS IS THE KEY CHANGE: Fill columns first */
   gap: 25px; /* Gap between project cards */
   padding: 10px; /* Optional padding within each slide group */
   box-sizing: border-box;
