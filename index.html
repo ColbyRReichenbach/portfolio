@@ -6,51 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Colby Reichenbach | Portfolio</title>
   <link rel="stylesheet" href="static/style.css"/>
-  <!-- Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-<!-- Hero / About Section -->
+
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <!-- Profile Picture remains outside the text container -->
     <img src="static/images/headshot.jpg" alt="Profile Picture" class="profile-pic">
-
-    <!-- New container for text content with transparent background -->
     <div class="about-info">
       <h1>Colby R. Reichenbach</h1>
       <p class="tagline">Biologist & Data Worker | Bridging Science and Technology</p>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/colby-reichenbach/" target="_blank">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/ColbyRReichenbach" target="_blank">
-          <i class="fab fa-github"></i>
-        <a href="static/images/ColbyReichenbach_resume_mar3.pdf" target="_blank">
-          <i class="fa-solid fa-file"></i>
-        </a>
+        <a href="https://www.linkedin.com/in/colby-reichenbach/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/ColbyRReichenbach" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="static/images/ColbyReichenbach_resume_mar3.pdf" target="_blank"><i class="fa-solid fa-file"></i></a>
       </div>
       <p class="about-text">
-        Hi, I’m Colby, a recent graduate from the University of North Carolina at Chapel Hill with a B.S. in Biology
-        and a minor in Data Science. While my academic background is rooted in the sciences, I developed a strong passion
-        for working with data—finding insights, solving problems, and building tools that make information more accessible.
-        This portfolio is a space where I showcase my data-driven projects, which span various sectors but share a common goal:
-        demonstrating my ability to analyze, visualize, and interpret complex data. I’m always open to learning, collaborating,
-        and new opportunities - please use the form at the bottom of this site to contact me!
+        Hi, I’m Colby, a recent graduate from the University of North Carolina at Chapel Hill with a B.S. in Biology and a minor in Data Science. While my academic background is rooted in the sciences, I developed a strong passion for working with data—finding insights, solving problems, and building tools that make information more accessible. This portfolio is a space where I showcase my data-driven projects, which span various sectors but share a common goal: demonstrating my ability to analyze, visualize, and interpret complex data. I’m always open to learning, collaborating, and new opportunities - please use the form at the bottom of this site to contact me!
       </p>
-      <!-- Button to Portfolio Section -->
       <a href="#portfolio" class="btn">View My Projects</a>
     </div>
   </div>
 </section>
 
-  <!-- Portfolio Section -->
 <section id="portfolio" class="portfolio-section">
   <div class="portfolio-container">
     <h2>My Projects</h2>
-    <div class="projects-slider"> <button class="arrow left-arrow" id="leftArrow" onclick="prevSlide()">&lt;</button>
-      <div class="slider-container"> <div class="slide-group">
+    <div class="projects-slider">
+      <button class="arrow left-arrow" id="leftArrow" onclick="prevSlide()">&lt;</button>
+      <div class="slider-container">
+        <div class="slide-group">
           <div class="project-card" onclick="openModal('modal_ad')">
             <img src="static/images/ad.jpg" alt="Ad Performance Analysis Preview">
             <div class="project-card-content">
@@ -83,7 +69,8 @@
               <button class="btn btn-view" onclick="openModal('modal_mlb_dash'); event.stopPropagation();">Preview</button>
             </div>
           </div>
-        </div> <div class="slide-group">
+        </div>
+        <div class="slide-group">
           <div class="project-card" onclick="openModal('modal_heart')">
             <img src="static/images/project5.jpg" alt="Heart Disease EDA Preview">
             <div class="project-card-content">
@@ -92,154 +79,22 @@
               <button class="btn btn-view" onclick="openModal('modal_heart'); event.stopPropagation();">Preview</button>
             </div>
           </div>
-          <div class="project-card" onclick="openModal('modal6')"> <img src="static/images/project6.jpg" alt="Project 6 Preview">
+          <div class="project-card" onclick="openModal('modal6')">
+            <img src="static/images/project6.jpg" alt="Project 6 Preview">
             <div class="project-card-content">
               <h3>Project Title 6</h3>
               <p>Short description of Project 6. (Update with actual details)</p>
               <button class="btn btn-view" onclick="openModal('modal6'); event.stopPropagation();">Preview</button>
             </div>
           </div>
-          </div> </div>
+        </div>
+      </div>
       <button class="arrow right-arrow" id="rightArrow" onclick="nextSlide()">&gt;</button>
     </div>
   </div>
 </section>
 
-
-  <!-- Modal for Project: MLB Dash -->
-<div id="modal_mlb_dash" class="modal" onclick="if(event.target === this){ closeModal('modal_mlb_dash'); }">
-  <div class="modal-content split">
-    <span class="close" onclick="closeModal('modal_mlb_dash')">&times;</span>
-    <div class="modal-left">
-      <img src="static/images/mlb_dash.jpg" alt="Project 1 Preview">
-    </div>
-    <div class="modal-right">
-      <h3>MLB Award Winner Visualization</h3>
-      <hr>
-        <h4>About this project:</h4>
-        <p>
-        This project visualizes award winners in Major League Baseball from 2000 to 2023. Using interactive filters, you
-        can explore MVP Winners, Cy Young Winners, and Silver Slugger Winners over any given season. There are various graphs
-        for each award that showcases the winner's stats from their award-winning year.
-        </p>
-        <hr>
-        <h4>Data Source:</h4>
-        <p>
-        This project uses data from the Lahman Baseball (Version 2023), a publicly available dataset containing
-        MLB player statistics from 1871-2023.
-        </p>
-        <hr>
-        <h4>Skills:</h4>
-        <li>SQL - Stored cleaned data in SQLite db.</li>
-        <li>Python - Data cleaning and processing.</li>
-        <li>Tableau - Data visualization and dashboard creation.</li>
-      <a href="https://public.tableau.com/app/profile/colby.reichenbach/viz/MLBAwardWinners2000-2023v1/OverviewDash" target="_blank" class="btn btn-project">Take Me to This Project</a>
-    </div>
-  </div>
-</div>
-
- <!-- Modal for Project 2 -->
-<div id="modal" class="modal" onclick="if(event.target === this){ closeModal('modal2'); }">
-  <div class="modal-content split">
-    <span class="close" onclick="closeModal('modal2')">&times;</span>
-    <div class="modal-left">
-      <img src="static/images/headshot.jpg" alt="Project 2 Preview">
-    </div>
-    <div class="modal-right">
-      <h3>Project Title 1</h3>
-      <hr>
-        <h4>About this project:</h4>
-        <p>
-        This project visualizes award winners in Major League Baseball from 2000 to 2023. Using interactive filters, you
-        can explore MVP Winners, Cy Young Winners, and Silver Slugger Winners over any given season. There are various graphs
-        for each award that showcases the winner's stats from their award-winning year.
-        </p>
-        <hr>
-        <h4>Data Source:</h4>
-        <p></p>
-        This project uses data from the Lahman Baseball (Version 2023), a publicly available dataset containing
-        MLB player statistics from 1871-2023.
-        </p>
-        <hr>
-        <h4>Skills:</h4>
-        <li>SQL - Stored cleaned data in SQLite db.</li>
-        <li>Python - Data cleaning and processing.</li>
-        <li>Tableau - Data visualization and dashboard creation.</li>
-      <a href="https://public.tableau.com/app/profile/colby.reichenbach/viz/MLBAwardWinners2000-2023v1/OverviewDash" target="_blank" class="btn btn-project">Take Me to This Project</a>
-    </div>
-  </div>
-</div>
-
-<!-- Modal for Project: Customer Churn Prediction -->
-<div id="modal_customer_churn" class="modal" onclick="if(event.target === this){ closeModal('modal_customer_churn'); }">
-  <div class="modal-content split">
-    <span class="close" onclick="closeModal('modal_customer_churn')">&times;</span>
-    <div class="modal-left">
-      <img src="static/images/customer_churn.jpg" alt="Customer Churn Prediction Preview">
-    </div>
-    <div class="modal-right">
-      <h3>Customer Churn Prediction</h3>
-      <hr>
-        <h4>About:</h4>
-        <p>
-        This project focuses on predicting customer churn by analyzing historical customer behavior to identify at-risk customers and suggest retention strategies.
-        </p>
-        <hr>
-        <h4>Data:</h4>
-        <p>
-        Uses customer demographics, usage patterns, and service details from publicly available telecom datasets.
-        </p>
-        <hr>
-        <h4>Skills/Tools:</h4>
-        <li>Python</li>
-        <li>Pandas & scikit-learn</li>
-        <li>Data Visualization (Matplotlib, Seaborn)</li>
-        <hr>
-        <h4>Outcome:</h4>
-        <p>
-        Developed a predictive model that highlights key churn factors, enabling targeted retention efforts.
-        </p>
-      <a href="static/images/Customer_Churn.md" target="_blank" class="btn btn-project">Take Me to This Project</a>
-    </div>
-  </div>
-</div>
-
-<!-- Modal for Project: Heart Disease Classifier -->
-<div id="modal_heart" class="modal" onclick="if(event.target === this){ closeModal('modal_heart'); }">
-  <div class="modal-content split">
-    <span class="close" onclick="closeModal('modal_heart')">&times;</span>
-    <div class="modal-left">
-      <img src="static/images/heart_disease.jpg" alt="Heart Disease Classifier Preview">
-    </div>
-    <div class="modal-right">
-      <h3>Heart Disease Classifier</h3>
-      <hr>
-        <h4>About:</h4>
-        <p>
-        This project builds a predictive classifier to assess the risk of heart disease, aiding early detection and informed healthcare decisions.
-        </p>
-        <hr>
-        <h4>Data:</h4>
-        <p>
-        Utilizes clinical data such as age, blood pressure, and cholesterol levels sourced from public datasets like the UCI Heart Disease dataset.
-        </p>
-        <hr>
-        <h4>Skills/Tools:</h4>
-        <li>Python</li>
-        <li>NumPy, Pandas</li>
-        <li>Classification Algorithms (Logistic Regression, Decision Trees)</li>
-        <hr>
-        <h4>Outcome:</h4>
-        <p>
-        Delivered an accurate classifier that demonstrates the potential of data-driven insights in early heart disease detection.
-        </p>
-      <a href="https://github.com/ColbyRReichenbach/Heart-Disease-Classifier-Data-Analysis-Predictive-Modeling" target="_blank" class="btn btn-project">Take Me to This Project</a>
-    </div>
-  </div>
-</div>
-
-<!-- Modal for Project: Ad Performance Analysis -->
-<div id="modal_ad" class="modal" onclick="if(event.target === this){ closeModal('modal_ad'); }">
+<div id="modal_ad" class="modal" data-markdown-source="https://raw.githubusercontent.com/ColbyRReichenbach/Ad-Performance-Analysis/main/README.md" onclick="if(event.target === this){ closeModal('modal_ad'); }">
   <div class="modal-content split">
     <span class="close" onclick="closeModal('modal_ad')">&times;</span>
     <div class="modal-left">
@@ -248,32 +103,13 @@
     <div class="modal-right">
       <h3>Ad Performance Analysis</h3>
       <hr>
-        <h4>About:</h4>
-        <p>
-        This project evaluates advertisement performance through A/B testing to determine which ad strategies deliver the best engagement and conversions.
-        </p>
-        <hr>
-        <h4>Data:</h4>
-        <p>
-        Analyzes digital campaign data such as impressions, clicks, and conversion rates from various marketing channels.
-        </p>
-        <hr>
-        <h4>Skills/Tools:</h4>
-        <li>Python & SQL</li>
-        <li>Statistical Analysis</li>
-        <li>Data Visualization</li>
-        <hr>
-        <h4>Outcome:</h4>
-        <p>
-        Provided actionable insights that optimized ad spend and campaign strategies, resulting in improved ROI.
-        </p>
-      <a href="static/images/Ad_AB.md" target="_blank" class="btn btn-project">Take Me to This Project</a>
+      <div class="project-details-container"><p>Loading project details...</p></div>
+      <a href="https://github.com/ColbyRReichenbach/Ad-Performance-Analysis" target="_blank" class="btn btn-project">View on GitHub</a>
     </div>
   </div>
 </div>
 
-<!-- Modal for Project: Ecommerce -->
-<div id="modal_ecommerce" class="modal" onclick="if(event.target === this){ closeModal('modal_ecommerce'); }">
+<div id="modal_ecommerce" class="modal" data-markdown-source="https://raw.githubusercontent.com/ColbyRReichenbach/Ecommerce/main/README.md" onclick="if(event.target === this){ closeModal('modal_ecommerce'); }">
   <div class="modal-content split">
     <span class="close" onclick="closeModal('modal_ecommerce')">&times;</span>
     <div class="modal-left">
@@ -282,30 +118,71 @@
     <div class="modal-right">
       <h3>Ecommerce Platform Analysis</h3>
       <hr>
-      <p>
-        <h4>About:</h4>
-        <p>
-        This project explores an ecommerce platform by either building a demo storefront or analyzing transactional data to understand customer behavior.
-        <p>
-        <hr>
-        <h4>Data:</h4>
-        <p>
-        Involves customer transactions, product details, and user reviews—sourced from real-world or simulated ecommerce datasets.
-        <p>
-        <hr>
-        <h4>Skills/Tools:</h4>
-        <li>Python & SQL</li>
-        <li>Dashboard creation - Streamlit</li>
-        <li>Data Analysis & Visualization</li>
-        <hr>
-        <h4>Outcome:</h4>
-        Delivered insights into customer purchasing patterns and improved the user experience, contributing to more optimized business operations.
-      </p>
-      <a href="https://github.com/ColbyRReichenbach/Ecommerce" target="_blank" class="btn btn-project">Take Me to This Project</a>
+      <div class="project-details-container"><p>Loading project details...</p></div>
+      <a href="https://github.com/ColbyRReichenbach/Ecommerce" target="_blank" class="btn btn-project">View on GitHub</a>
     </div>
   </div>
 </div>
 
+<div id="modal_customer_churn" class="modal" data-markdown-source="https://raw.githubusercontent.com/ColbyRReichenbach/Customer-Churn-Analysis/main/README.md" onclick="if(event.target === this){ closeModal('modal_customer_churn'); }">
+  <div class="modal-content split">
+    <span class="close" onclick="closeModal('modal_customer_churn')">&times;</span>
+    <div class="modal-left">
+      <img src="static/images/customer_churn.jpg" alt="Customer Churn Prediction Preview">
+    </div>
+    <div class="modal-right">
+      <h3>Customer Churn Prediction</h3>
+      <hr>
+      <div class="project-details-container"><p>Loading project details...</p></div>
+      <a href="https://github.com/ColbyRReichenbach/Customer-Churn-Analysis" target="_blank" class="btn btn-project">View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal_heart" class="modal" data-markdown-source="https://raw.githubusercontent.com/ColbyRReichenbach/Heart-Disease-Classifier-Data-Analysis-Predictive-Modeling/main/README.md" onclick="if(event.target === this){ closeModal('modal_heart'); }">
+  <div class="modal-content split">
+    <span class="close" onclick="closeModal('modal_heart')">&times;</span>
+    <div class="modal-left">
+      <img src="static/images/heart_disease.jpg" alt="Heart Disease Classifier Preview">
+    </div>
+    <div class="modal-right">
+      <h3>Heart Disease Classifier</h3>
+      <hr>
+      <div class="project-details-container"><p>Loading project details...</p></div>
+      <a href="https://github.com/ColbyRReichenbach/Heart-Disease-Classifier-Data-Analysis-Predictive-Modeling" target="_blank" class="btn btn-project">View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal_mlb_dash" class="modal" onclick="if(event.target === this){ closeModal('modal_mlb_dash'); }">
+  <div class="modal-content split">
+    <span class="close" onclick="closeModal('modal_mlb_dash')">&times;</span>
+    <div class="modal-left">
+      <img src="static/images/mlb_dash.jpg" alt="MLB Dashboard Preview">
+    </div>
+    <div class="modal-right">
+      <h3>MLB Award Winner Visualization</h3>
+      <hr>
+      <h4>About this project:</h4>
+      <p>This project visualizes award winners in Major League Baseball from 2000 to 2023. Using interactive filters, you can explore MVP Winners, Cy Young Winners, and Silver Slugger Winners over any given season...</p>
+      <hr>
+      <h4>Data Source:</h4>
+      <p>This project uses data from the Lahman Baseball (Version 2023)...</p>
+      <hr>
+      <h4>Skills:</h4>
+      <li>SQL - Stored cleaned data in SQLite db.</li>
+      <li>Python - Data cleaning and processing.</li>
+      <li>Tableau - Data visualization and dashboard creation.</li>
+      <a href="https://public.tableau.com/app/profile/colby.reichenbach/viz/MLBAwardWinners2000-2023v1/OverviewDash" target="_blank" class="btn btn-project">View on Tableau Public</a>
+    </div>
+  </div>
+</div>
+
+<script src="static/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</body>
+</html>
   
   <script src="static/script.js"></script>
 </body>
