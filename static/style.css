@@ -175,10 +175,13 @@ html {
 
 .project-card img {
   width: 100%;
-  height: 220px; /* Fixed height for uniformity, adjust as needed */
-  object-fit: cover; /* Ensures image covers the area, might crop */
+  height: auto;         /* Let aspect-ratio and width determine height */
+  aspect-ratio: 16 / 9; /* Example: for a 16:9 widescreen ratio. Adjust as needed (e.g., 4/3, 1/1) */
+  object-fit: cover;    /* Ensures the image fills this defined aspect ratio, cropping if necessary */
   display: block;
-  border-bottom: 1px solid #eee; /* Subtle separator if needed */
+  border-bottom: 1px solid #eee;
+}
+
 }
 
 .project-card-content {
