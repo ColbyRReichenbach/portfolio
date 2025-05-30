@@ -182,8 +182,6 @@ html {
   border-bottom: 1px solid #eee;
 }
 
-}
-
 .project-card-content {
   padding: 20px; /* More padding around the title */
   flex-grow: 1; /* Allows content to take up remaining space if card height varies */
