@@ -283,7 +283,6 @@ html {
   flex: 1.5; /* Takes 1.5 parts of flex space, more room for text */
   min-width: 300px;
   padding: 15px;
-  display: flex;
   flex-direction: column;
   /* justify-content: center; REMOVED to allow natural top alignment */
   overflow-y: auto;
