@@ -300,7 +300,7 @@ html {
 .modal-right .modal-buttons {
   margin-top: 20px;     /* Adds some space above the buttons */
   display: flex;        /* THIS IS THE KEY: Arranges children (buttons) in a row */
-  gap: 10px;            /* Adds a 10px space between the buttons */
+  gap: 40px;            /* Adds a 10px space between the buttons */
   flex-wrap: wrap;      /* Allows buttons to wrap to the next line on very small screens if needed */
 }
 
