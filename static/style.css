@@ -307,7 +307,7 @@ html {
   width: fit-content; /* Adjusts button width to its content. Or use a fixed width, or 100% */
   margin-left: auto;  /* If width is not 100%, this helps center it */
   margin-right: auto; /* If width is not 100%, this helps center it */
-  margin-bottom: 15px; /* << ADDS 15px SPACE BELOW EACH BUTTON */
+  margin-bottom: 40px; /* << ADDS 15px SPACE BELOW EACH BUTTON */
 }
 
 /* Remove margin from the very last button to prevent extra space at the bottom */
