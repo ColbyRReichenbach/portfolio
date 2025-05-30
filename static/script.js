@@ -1,8 +1,7 @@
-// script.js
 console.log("JavaScript is running!");
 
-// --- NEW MODAL LOGIC ---
-// This section is upgraded to handle dynamic content loading.
+// --- MODAL LOGIC ---
+// (openModal, closeModal, and window.onclick for modals remain largely the same)
 
 /**
  * Opens a modal and fetches its content if it's dynamic.
@@ -16,13 +15,12 @@ function openModal(modalId) {
     }
     
     modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scroll when modal is open
 
     const markdownSource = modal.getAttribute('data-markdown-source');
     const container = modal.querySelector('.project-details-container');
 
-    // If the modal has a markdown source and we haven't loaded it yet.
-    // The check for "Loading" prevents re-fetching if you close and re-open the modal.
-    if (markdownSource && container && container.innerHTML.includes('Loading')) {
+    if (markdownSource && container && (!container.dataset.loaded || container.innerHTML.includes('Loading'))) {
         fetch(markdownSource)
             .then(response => {
                 if (!response.ok) {
@@ -31,8 +29,13 @@ function openModal(modalId) {
                 return response.text();
             })
             .then(text => {
-                // Use the marked.js library to parse the Markdown text to HTML
-                container.innerHTML = marked.parse(text);
+                if (typeof marked !== 'undefined') {
+                    container.innerHTML = marked.parse(text);
+                    container.dataset.loaded = 'true'; // Mark as loaded
+                } else {
+                    console.error('marked.js library is not loaded.');
+                    container.innerHTML = '<p>Error: Markdown parser not available.</p>';
+                }
             })
             .catch(error => {
                 container.innerHTML = '<p><strong>Error:</strong> Could not load project details. Please try again later.</p>';
@@ -49,10 +52,11 @@ function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = "none";
+        document.body.style.overflow = 'auto'; // Restore background scroll
     }
 }
 
-// This allows closing the modal by clicking on the background. This is kept from your original file.
+// Close modal if background is clicked
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         if (event.target.id) {
@@ -61,62 +65,26 @@ window.onclick = function(event) {
     }
 }
 
+// --- REMOVED SLIDER FUNCTIONALITY ---
 
-// --- SLIDER FUNCTIONALITY (UNCHANGED) ---
-// Your existing slider logic is preserved below.
-
+// --- NEW GIF HOVER FUNCTIONALITY ---
 document.addEventListener('DOMContentLoaded', function() {
-    const sliderContainer = document.querySelector('.slider-container');
-    const slideGroups = document.querySelectorAll('.slide-group');
-    const leftArrow = document.getElementById('leftArrow');
-    const rightArrow = document.getElementById('rightArrow');
+    const projectCards = document.querySelectorAll('.project-card');
 
-    if (!sliderContainer || slideGroups.length === 0 || !leftArrow || !rightArrow) {
-        console.warn("Slider elements not found. Slider functionality disabled.");
-        if(leftArrow) leftArrow.style.display = 'none';
-        if(rightArrow) rightArrow.style.display = 'none';
-        return; // Exit if essential elements are missing
-    }
+    projectCards.forEach(card => {
+        const img = card.querySelector('img');
+        // Ensure these attributes exist to prevent errors if a card is missing them
+        const staticSrc = img ? img.getAttribute('data-static-src') : null;
+        const gifSrc = img ? img.getAttribute('data-gif-src') : null;
 
-    let currentIndex = 0; // Index of the current .slide-group
-    const totalSlides = slideGroups.length;
+        if (img && staticSrc && gifSrc) { // Only add listeners if all parts are present
+            card.addEventListener('mouseenter', () => {
+                img.src = gifSrc;
+            });
 
-    function updateSlider() {
-        sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-        // Update arrow visibility
-        if (currentIndex === 0) {
-            leftArrow.classList.add('hidden');
-        } else {
-            leftArrow.classList.remove('hidden');
+            card.addEventListener('mouseleave', () => {
+                img.src = staticSrc;
+            });
         }
-
-        if (currentIndex === totalSlides - 1) {
-            rightArrow.classList.add('hidden');
-        } else {
-            rightArrow.classList.remove('hidden');
-        }
-    }
-
-    window.nextSlide = function() { // Make functions globally accessible from HTML onclick
-        if (currentIndex < totalSlides - 1) {
-            currentIndex++;
-            updateSlider();
-        }
-    }
-
-    window.prevSlide = function() { // Make functions globally accessible from HTML onclick
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateSlider();
-        }
-    }
-
-    // Initial setup
-    if (totalSlides <= 1) { // Hide arrows if only one slide or no slides
-        leftArrow.style.display = 'none';
-        rightArrow.style.display = 'none';
-    } else {
-        updateSlider(); // Set initial state of arrows and slide position
-    }
+    });
 });
