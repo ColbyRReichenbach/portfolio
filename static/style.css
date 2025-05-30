@@ -236,9 +236,6 @@ html {
   }
 }
 
-/* Contact Section (Styles exist but section not in HTML) */
-.contact-section, .contact-container, #contactForm /* styles can remain if you plan to add it */
-
 /* Modal Styles (largely unchanged, ensure they still work well) */
 .modal {
   display: none;
