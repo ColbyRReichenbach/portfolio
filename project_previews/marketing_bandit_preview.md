@@ -17,5 +17,3 @@ The core of the project is an interactive **Streamlit dashboard** where users ca
 * Reinforcement Learning (Multi-Armed Bandits, Epsilon-Greedy)
 * A/B Testing, Monte Carlo Simulation
 * ROI Optimization & Marketing Analytics
-
-"View the Code Here: [(https://github.com/ColbyRReichenbach/Marketing-bandit-roi)]**
