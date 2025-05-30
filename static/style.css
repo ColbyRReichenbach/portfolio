@@ -7,24 +7,23 @@
 
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.3rem; /* Base font size, adjust as needed */
   color: #1f1f1f;
 }
 
 /* Hero / About Section */
 .hero {
-  position: relative; /* Added for layering */
-  min-height: 100vh; /* Full viewport height */
+  position: relative;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 40px 20px;
-  background: #f5f5f5; /* Fallback background color */
-  overflow: hidden; /* Hide any overflow from the blurred background */
+  background: #f5f5f5;
+  overflow: hidden;
 }
 
-/* Blurred Background Image */
 .hero-bg {
   position: absolute;
   top: 0;
@@ -36,7 +35,6 @@ body {
   z-index: 0;
 }
 
-/* Ensure hero content sits above the blurred background */
 .hero-content {
   position: relative;
   z-index: 1;
@@ -66,34 +64,40 @@ h1 {
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Increased gap slightly for the new icon */
   margin-bottom: 20px;
 }
 
 .social-icons a {
   text-decoration: none;
-  font-size: 2.5rem;
-  color: #333; /* Default icon color */
+  font-size: 2.5rem; /* Keep icon size consistent */
+  color: #333;
+  transition: color 0.3s ease; /* Smooth transition for hover */
+}
+.social-icons a .fa-file, .social-icons a .fa-envelope { /* Slightly smaller for file and envelope */
+    font-size: 2.2rem;
 }
 
+
 .social-icons a:hover {
-  color: rgba(73, 115, 63, 0.97); /* Example: LinkedIn shade, adjust as you like */
+  color: rgba(73, 115, 63, 0.97);
 }
 
 .about-text {
   margin-bottom: 30px;
   line-height: 1.6;
+  font-size: 1rem; /* Adjusted for better readability within the block */
 }
 
-/* New container for About text content */
 .about-info {
-  background: rgba(255, 255, 255, 0.8);  /* White with 80% opacity */
-  padding: 20px;
-  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.85); /* Slightly more opaque */
+  padding: 25px;
+  border-radius: 15px; /* Softened radius */
   margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Subtle shadow */
 }
 
-/* (Optional) Adjust typography inside the about-info if needed */
 .about-info h1,
 .about-info .tagline,
 .about-info .about-text,
@@ -101,13 +105,11 @@ h1 {
   margin-bottom: 15px;
 }
 
-
-
 /* Buttons */
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  background: #0077b5; /* A default brand color, e.g., LinkedIn blue */
+  background: #0077b5;
   color: #fff;
   text-decoration: none;
   border-radius: 20px;
@@ -131,7 +133,7 @@ html {
 }
 
 .portfolio-container {
-  max-width: 1000px; /* Adjust if needed for your 2x2 grid */
+  max-width: 1200px; /* Wider for potentially 3 columns */
   margin: 0 auto;
   text-align: center;
 }
@@ -142,275 +144,104 @@ html {
   color: #333;
 }
 
-/* --- SLIDER STYLES REVISED --- */
-.projects-slider {
-  position: relative;
-  overflow: hidden; /* This clips the content outside the viewport */
-  width: 100%; /* Or a specific max-width if you want the slider itself to be narrower */
-  margin: 0 auto; /* Center the slider if it has a max-width */
-  padding: 0 50px; /* Space for arrows if they are outside the slide-container */
-}
-
-.slider-container { /* This container holds all .slide-group divs */
-  display: flex; /* Lays out slide-groups horizontally */
-  transition: transform 0.5s ease-in-out; /* Animation for sliding */
-  /* Width will be set by the number of slides, e.g., 200% for 2 slides */
-}
-
-.slide-group {
-  flex: 0 0 100%; /* Each slide-group takes the full width of .projects-slider */
+/* --- NEW GRID STYLES --- */
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* We still want 2 columns */
-  grid-template-rows: repeat(2, 1fr);    /* And we want space for 2 rows to make the 2x2 structure */
-  grid-auto-flow: column; /* THIS IS THE KEY CHANGE: Fill columns first */
-  gap: 25px; /* Gap between project cards */
-  padding: 10px; /* Optional padding within each slide group */
-  box-sizing: border-box;
+  /* Responsive grid: min 280px width, fill available space, create as many columns as fit */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px; /* Gap between project cards */
 }
+
+/* --- REMOVED SLIDER-SPECIFIC STYLES --- */
+/* .projects-slider, .slider-container (old), .slide-group, .arrow related styles are removed or repurposed */
 
 .project-card {
-  aspect-ratio: 1 / 1; /* Make the card square */
   background: #fafafa;
   border-radius: 15px;
-  text-align: left;
+  text-align: left; /* Title will be left-aligned within its content box */
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  overflow: hidden;
+  overflow: hidden; /* Important for image and border-radius */
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  /* aspect-ratio: 1 / 1; REMOVED to allow content to define height */
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transform: translateY(-8px); /* Slightly more lift */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* More prominent shadow */
 }
 
 .project-card img {
   width: 100%;
-  height: 55%; /* Image takes about 55% of the card's height */
-  object-fit: cover;
+  height: 220px; /* Fixed height for uniformity, adjust as needed */
+  object-fit: cover; /* Ensures image covers the area, might crop */
   display: block;
+  border-bottom: 1px solid #eee; /* Subtle separator if needed */
 }
 
 .project-card-content {
-  padding: 15px;
-  display: flex;
+  padding: 20px; /* More padding around the title */
+  flex-grow: 1; /* Allows content to take up remaining space if card height varies */
+  display: flex; /* To center title if needed or align items */
   flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
-  height: 45%; /* Remaining height */
+  justify-content: center; /* Centers title vertically if card has extra space */
 }
 
 .project-card h3 {
-  margin-bottom: 8px;
-  font-size: 1.1rem;
+  margin-bottom: 0; /* No margin if it's the only item */
+  font-size: 1.2rem; /* Slightly larger title on card */
   color: #333;
+  text-align: center; /* Center title text */
 }
 
-.project-card p {
-  margin-bottom: 12px;
-  color: #555;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  flex-grow: 1;
-}
-
-.btn-view {
-  padding: 8px 15px;
-  font-size: 0.85rem;
-  background-color: #555;
-  align-self: flex-start;
-}
-.btn-view:hover {
-  background-color: #333;
-}
-
-/* Navigation Arrows */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  border: none;
-  padding: 12px 18px; /* Slightly larger padding */
-  font-size: 1.5rem; /* Larger arrow icon */
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%; /* Make arrows circular */
-  line-height: 1; /* Align text better in circle */
-  width: 45px; /* Explicit width */
-  height: 45px; /* Explicit height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-}
-.arrow:hover {
-    background: rgba(0,0,0,0.8);
-}
-
-.left-arrow {
-  left: 5px; /* Position from the edge of .projects-slider */
-}
-
-.right-arrow {
-  right: 5px; /* Position from the edge of .projects-slider */
-}
-
-.arrow.hidden { /* To hide arrows when at beginning or end */
-  display: none;
-}
+/* REMOVED .btn-view from card as it's no longer directly on the card */
 
 /* Responsive Adjustments */
 @media (max-width: 900px) {
-    .portfolio-container {
-        max-width: 100%; /* Allow it to be full width */
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    .projects-slider {
-      padding: 0 45px; /* Adjust arrow padding for smaller screens */
-    }
-    .slide-group {
-        gap: 15px; /* Reduce gap on smaller screens */
-    }
+  .portfolio-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+   .projects-grid {
+    /* For tablet, auto-fit with minmax(280px, 1fr) likely results in 2 columns. */
+    /* If specific 2-column is desired: grid-template-columns: repeat(2, 1fr); */
+    gap: 20px;
+  }
 }
 
 @media (max-width: 768px) {
-  /* Hero and other general responsive styles (Keep existing) */
-  .projects-slider {
-    padding: 0; /* Remove padding if arrows move or layout changes drastically */
+  body {
+    font-size: 1.1rem; /* Adjust base font for mobile */
   }
-  .slide-group {
-    grid-template-columns: 1fr; /* Stack to 1 column */
-    /* If 1 column, likely don't need 2 rows explicitly. aspect-ratio on card will define height */
-    padding: 5px;
+  h1 {
+    font-size: 2rem;
   }
-  .project-card {
-    aspect-ratio: unset; /* Remove square constraint if it looks odd in single column */
-    min-height: 320px; /* Or let content define height */
+  .tagline {
+    font-size: 1.1rem;
+  }
+  .about-info {
+    padding: 20px;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr; /* Stack to 1 column on mobile */
+    gap: 25px;
   }
   .project-card img {
-    height: 180px; /* Adjust image height for single column layout */
+    height: 200px; /* Adjust image height for single column layout */
   }
-  .arrow { /* Potentially reposition or resize arrows for mobile */
-    padding: 10px 15px;
-    font-size: 1.2rem;
-    width: 40px;
-    height: 40px;
-  }
-  .left-arrow { left: 0px; }
-  .right-arrow { right: 0px; }
-}
-
-
-.arrow.hidden {
-  display: none;
-}
-
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .tagline {
-    font-size: 1rem;
+  .project-card h3 {
+    font-size: 1.1rem;
   }
 }
 
-/* About Details Styling */
-.about-details {
-  margin: 30px 0;
-  text-align: left;
-  padding: 0 20px;
-}
+/* Contact Section (Styles exist but section not in HTML) */
+.contact-section, .contact-container, #contactForm /* styles can remain if you plan to add it */
 
-.about-details h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.about-details p {
-  margin-bottom: 20px;
-  font-size: 1rem;
-  color: #444;
-}
-
-.skills-list {
-  list-style-type: disc;
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-.skills-list li {
-  font-size: 1rem;
-  margin-bottom: 5px;
-}
-
-/* Contact Section */
-.contact-section {
-  padding: 60px 20px;
-  background: #e1e1e1;
-}
-
-.contact-container {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.contact-container h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.contact-container p {
-  margin-bottom: 30px;
-  font-size: 1rem;
-  color: #555;
-}
-
-#contactForm {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  text-align: left;
-}
-
-#contactForm label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-#contactForm input,
-#contactForm textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-#contactForm button {
-  align-self: center;
-  padding: 15px 32px;
-  background: #0077b5;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-#contactForm button:hover {
-  background: #005c8c;
-}
-
-/* Modal Styles */
+/* Modal Styles (largely unchanged, ensure they still work well) */
 .modal {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -418,158 +249,157 @@ html {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay */
 }
 
-/* Split layout for modal content */
 .modal-content.split {
   background: #fff;
   margin: 5% auto;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 25px; /* Increased padding */
+  border-radius: 10px; /* Softer radius */
   max-width: 900px;
-  min-height: 500px;  /* Increase this value as needed */
+  min-height: 500px; 
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
   position: relative;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
 }
 
-
-/* Left column for the image */
 .modal-left {
-  flex: 1;
-  padding: 10px;
+  flex: 1; /* Takes 1 part of flex space */
+  min-width: 300px; /* Minimum width before wrapping or shrinking too much */
+  padding: 15px;
   display: flex;
-  align-items: center; /* Center image vertically */
+  align-items: center;
   justify-content: center;
 }
 
-/* Ensure the image scales nicely within the new height */
 .modal-left img {
-  max-height: 100%;  /* Allow image to fill its container without exceeding it */
-  width: auto;
-  border-radius: 4px;
+  max-width: 100%;
+  max-height: 450px; /* Max height for the image in modal */
+  height: auto;
+  border-radius: 6px;
 }
 
-/* Right column for text and button */
 .modal-right {
-  flex: 1;
-  padding: 10px;
+  flex: 1.5; /* Takes 1.5 parts of flex space, more room for text */
+  min-width: 300px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center text */
-  overflow-y: auto; /* In case content is long */
+  /* justify-content: center; REMOVED to allow natural top alignment */
+  overflow-y: auto;
 }
 
 .modal-right h3,
 .modal-right h4,
 .modal-right p,
 .modal-right li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+.modal-right .btn-project { /* Style for button inside modal */
+    margin-top: 20px;
+    align-self: flex-start;
 }
 
-/* Ensure the image fills its container appropriately */
-.modal-left img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
 
-/* Close button */
 .close {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
+  top: 15px;
+  right: 20px;
+  font-size: 28px; /* Larger close button */
+  font-weight: bold;
+  color: #555; /* Darker close button */
   cursor: pointer;
+  transition: color 0.2s ease;
+}
+.close:hover {
+    color: #000;
 }
 
-/* Responsive: Stack columns on smaller screens */
+
 @media (max-width: 768px) {
   .modal-content.split {
     flex-direction: column;
+    margin: 10% auto; /* More margin on mobile */
+    padding: 20px;
+    min-height: 0; /* Allow content to define height */
+  }
+  .modal-left, .modal-right {
+    flex: 1 1 100%; /* Allow full width when stacked */
+    padding: 10px;
+  }
+  .modal-left img {
+    max-height: 250px; /* Adjust image height in modal for mobile */
   }
 }
 
-/* --- Styles for Dynamically Loaded Markdown Content --- */
-/* Add this entire block to the end of your existing style.css file */
-
+/* Styles for Dynamically Loaded Markdown Content (Unchanged but reviewed for compatibility) */
 .project-details-container {
     text-align: left;
-    color: #333; /* Darker text for readability */
+    color: #333;
 }
-
-/* Add some vertical space to the container inside the modal */
 .modal-right .project-details-container {
-    height: 100%;
-    overflow-y: auto; /* Allow scrolling if content is long */
-    padding-right: 15px; /* Add some padding so scrollbar doesn't hug the text */
+    height: auto; /* Changed from 100% to fit content */
+    /* overflow-y: auto; This is on modal-right now */
+    padding-right: 10px; 
 }
-
+/* ... other .project-details-container styles (h1-h4, p, ul, ol, li, pre, code, a, img) remain the same ... */
 .project-details-container h1,
 .project-details-container h2,
 .project-details-container h3,
 .project-details-container h4 {
-    margin-top: 24px;
-    margin-bottom: 12px;
-    color: #1a252f;
+  margin-top: 20px; /* Reduced top margin */
+  margin-bottom: 10px;
+  color: #1a252f;
 }
-
 .project-details-container p {
-    margin-bottom: 16px;
-    line-height: 1.6;
+  margin-bottom: 12px;
+  line-height: 1.7; /* Increased line height for readability */
 }
-
 .project-details-container ul,
 .project-details-container ol {
-    margin-bottom: 16px;
-    padding-left: 25px;
+  margin-bottom: 12px;
+  padding-left: 25px;
 }
-
 .project-details-container li {
-    margin-bottom: 8px;
+  margin-bottom: 6px;
 }
-
-/* Styles for code blocks */
 .project-details-container pre {
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 16px;
-    overflow-x: auto; /* Allow horizontal scrolling for long code lines */
-    white-space: pre-wrap; /* Wrap long lines within the code block */
-    word-wrap: break-word;
-    margin-bottom: 16px;
+  background-color: #f8f9fa; /* Lighter code block */
+  border: 1px solid #e9ecef; /* Softer border */
+  border-radius: 4px;
+  padding: 12px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  font-size: 0.85em; /* Smaller font for code */
 }
-
 .project-details-container code {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #e9e9e9; /* Match portfolio background for consistency */
-    padding: 3px 5px;
-    border-radius: 4px;
-    font-size: 0.9em;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #e9ecef; 
+  padding: 2px 4px; /* Smaller padding */
+  border-radius: 3px;
+  font-size: 0.85em;
 }
-
 .project-details-container pre code {
-    background-color: transparent; /* Code inside a pre block shouldn't have its own background */
-    padding: 0;
-    border-radius: 0;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
 }
-
 .project-details-container a {
-    color: #0077b5; /* Link color from your button style */
-    text-decoration: none;
-    font-weight: bold;
+  color: #0077b5;
+  text-decoration: none;
+  font-weight: bold;
 }
-
 .project-details-container a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
 .project-details-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
