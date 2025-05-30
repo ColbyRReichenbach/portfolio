@@ -20,6 +20,7 @@
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/colby-reichenbach/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/ColbyRReichenbach" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:colby.r.reichenbach@email.com" target="_blank"><i class="fa-solid fa-envelope"></i></a> {/* */}
         <a href="static/images/ColbyReichenbach_resume_mar3.pdf" target="_blank"><i class="fa-solid fa-file"></i></a>
       </div>
       <p class="about-text">
@@ -33,63 +34,53 @@
 <section id="portfolio" class="portfolio-section">
   <div class="portfolio-container">
     <h2>My Projects</h2>
-    <div class="projects-slider">
-      <button class="arrow left-arrow" id="leftArrow" onclick="prevSlide()">&lt;</button>
-      <div class="slider-container">
-        <div class="slide-group">
-          <div class="project-card" onclick="openModal('modal_ad')">
-            <img src="static/images/ad.jpg" alt="Ad Performance Analysis Preview">
-            <div class="project-card-content">
-              <h3>Ad Performance Analysis and AB - Testing</h3>
-              <p>Comprehensive data analysis focused on A/B testing for social media ad campaigns.</p>
-              <a href="https://github.com/ColbyRReichenbach/Ad-Performance-Analysis" target="_blank" class="btn btn-view" onclick="event.stopPropagation();">Preview</a>
-            </div>
-          </div>
-          <div class="project-card" onclick="openModal('modal_ecommerce')">
-            <img src="static/images/ecommerce.jpg" alt="Ecommerce Analytics Dashboard Preview">
-            <div class="project-card-content">
-              <h3>Ecommerce Analytics Dashboard</h3>
-              <p>Hosts an internal analytics dashboard built in Streamlit for e-commerce data.</p>
-              <a href="https://github.com/ColbyRReichenbach/Ecommerce" target="_blank" class="btn btn-view" onclick="event.stopPropagation();">Preview</a>
-            </div>
-          </div>
-          <div class="project-card" onclick="openModal('modal_customer_churn')">
-            <img src="static/images/project3.jpg" alt="Customer Churn Analysis Preview">
-            <div class="project-card-content">
-              <h3>Customer Churn Analysis</h3>
-              <p>Analyzes customer churn behavior and develops data-driven retention strategies.</p>
-              <a href="https://github.com/ColbyRReichenbach/Customer-Churn-Analysis" target="_blank" class="btn btn-view" onclick="event.stopPropagation();">Preview</a>
-            </div>
-          </div>
-          <div class="project-card" onclick="openModal('modal_mlb_dash')">
-            <img src="static/images/project4.jpg" alt="MLB Award Winner Visualization Preview">
-            <div class="project-card-content">
-              <h3>MLB Award Winner Visualization</h3>
-              <p>An interactive Tableau visualization of MLB award winners and their stats.</p>
-              <a href="https://public.tableau.com/app/profile/colby.reichenbach/viz/MLBAwardWinners2000-2023v1/OverviewDash" target="_blank" class="btn btn-view" onclick="event.stopPropagation();">Preview</a>
-            </div>
-          </div>
-        </div>
-        <div class="slide-group">
-          <div class="project-card" onclick="openModal('modal_heart')">
-            <img src="static/images/project5.jpg" alt="Heart Disease EDA Preview">
-            <div class="project-card-content">
-              <h3>Heart Disease EDA and Predictive Modeling</h3>
-              <p>Analyzes heart disease risk using machine learning models and EDA techniques.</p>
-              <a href="https://github.com/ColbyRReichenbach/Heart-Disease-Classifier-Data-Analysis-Predictive-Modeling" target="_blank" class="btn btn-view" onclick="event.stopPropagation();">Preview</a>
-            </div>
-          </div>
-          <div class="project-card" onclick="openModal('modal6')">
-            <img src="static/images/project6.jpg" alt="Project 6 Preview">
-            <div class="project-card-content">
-              <h3>Project Title 6</h3>
-              <p>Short description of Project 6. (Update with actual details)</p>
-              <a href="#" target="_blank" class="btn btn-view" onclick="event.stopPropagation();">Preview</a>
-            </div>
-          </div>
+    {/* */}
+    <div class="projects-grid"> {/* */}
+      
+      <div class="project-card" onclick="openModal('modal_ad')">
+        <img src="static/images/ad.jpg" alt="Ad Performance Analysis Preview" data-static-src="static/images/ad.jpg" data-gif-src="static/images/ad.jpg"> {/* */}
+        <div class="project-card-content">
+          <h3>Ad Performance Analysis and AB - Testing</h3>
+          {/* */}
         </div>
       </div>
-      <button class="arrow right-arrow" id="rightArrow" onclick="nextSlide()">&gt;</button>
+
+      <div class="project-card" onclick="openModal('modal_ecommerce')">
+        <img src="static/images/ecommerce.jpg" alt="Ecommerce Analytics Dashboard Preview" data-static-src="static/images/ecommerce.jpg" data-gif-src="static/images/ecommerce.jpg"> {/* */}
+        <div class="project-card-content">
+          <h3>Ecommerce Analytics Dashboard</h3>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openModal('modal_customer_churn')">
+        <img src="static/images/project3.jpg" alt="Customer Churn Analysis Preview" data-static-src="static/images/project3.jpg" data-gif-src="static/images/project3.jpg"> {/* */}
+        <div class="project-card-content">
+          <h3>Customer Churn Analysis</h3>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openModal('modal_mlb_dash')">
+        <img src="static/images/project4.jpg" alt="MLB Award Winner Visualization Preview" data-static-src="static/images/project4.jpg" data-gif-src="static/images/project4.jpg"> {/* */}
+        <div class="project-card-content">
+          <h3>MLB Award Winner Visualization</h3>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openModal('modal_heart')">
+        <img src="static/images/project5.jpg" alt="Heart Disease EDA Preview" data-static-src="static/images/project5.jpg" data-gif-src="static/images/project5.jpg"> {/* */}
+        <div class="project-card-content">
+          <h3>Heart Disease EDA and Predictive Modeling</h3>
+        </div>
+      </div>
+      
+      <div class="project-card" onclick="openModal('modal6')">
+        <img src="static/images/project6.jpg" alt="Project 6 Preview" data-static-src="static/images/project6.jpg" data-gif-src="static/images/project6.jpg"> {/* */}
+        <div class="project-card-content">
+          <h3>Project Title 6</h3>
+          {/* */}
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -124,8 +115,7 @@
   </div>
 </div>
 
-<div id="modal_customer_churn" 
-     data-markdown-source="https://raw.githubusercontent.com/ColbyRReichenbach/Customer-Churn-Prediction-Data-Insights-Retention-Strategies/main/Report.md" onclick="if(event.target === this){ closeModal('modal_heart'); }">>
+<div id="modal_customer_churn" class="modal" data-markdown-source="https://raw.githubusercontent.com/ColbyRReichenbach/Customer-Churn-Prediction-Data-Insights-Retention-Strategies/main/Report.md" onclick="if(event.target === this){ closeModal('modal_customer_churn'); }">
   <div class="modal-content split">
     <span class="close" onclick="closeModal('modal_customer_churn')">&times;</span>
     <div class="modal-left">
@@ -135,9 +125,9 @@
       <h3>Customer Churn Prediction</h3>
       <hr>
       <div class="project-details-container"><p>Loading project details...</p></div>
-<div id="modal_customer_churn" 
-     data-markdown-source="https://raw.githubusercontent.com/ColbyRReichenbach/Customer-Churn-Prediction-Data-Insights-Retention-Strategies/main/Report.md" 
-     ...>    </div>
+      {/* */}
+      <a href="https://github.com/ColbyRReichenbach/Customer-Churn-Prediction-Data-Insights-Retention-Strategies" target="_blank" class="btn btn-project">View on GitHub</a>
+    </div>
   </div>
 </div>
 
@@ -180,13 +170,27 @@
   </div>
 </div>
 
- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+{/* */}
+<div id="modal6" class="modal" onclick="if(event.target === this){ closeModal('modal6'); }">
+  <div class="modal-content split">
+    <span class="close" onclick="closeModal('modal6')">&times;</span>
+    <div class="modal-left">
+      <img src="static/images/project6.jpg" alt="Project 6 Large Preview">
+    </div>
+    <div class="modal-right">
+      <h3>Project Title 6</h3>
+      <hr>
+      <div class="project-details-container">
+        <p>Details about Project 6. Update this content or link to a Markdown file.</p>
+      </div>
+      <a href="#" target="_blank" class="btn btn-project">View Project</a>
+    </div>
+  </div>
+</div>
 
-    <script src="static/script.js"></script>
 
-</body>
-</html>
-  
-  <script src="static/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="static/script.js"></script>
+
 </body>
 </html>
