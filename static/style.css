@@ -298,10 +298,11 @@ html {
   margin-bottom: 12px;
 }
 .modal-right .modal-buttons {
-  margin-top: 20px;     /* Adds some space above the buttons */
-  display: flex;        /* THIS IS THE KEY: Arranges children (buttons) in a row */
-  gap: 40px;            /* Adds a 10px space between the buttons */
-  flex-wrap: wrap;      /* Allows buttons to wrap to the next line on very small screens if needed */
+  margin-top: 20px;       /* Space above the button group */
+  display: flex;
+  flex-direction: column; /* This stacks the flex items (buttons) vertically */
+  gap: 15px;              /* This will now create a 15px vertical gap between buttons */
+  align-items: center;   /* Allows buttons to wrap to the next line on very small screens if needed */
 }
 
 .close {
