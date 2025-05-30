@@ -1,5 +1,3 @@
-### AI-Driven Ad Profit Optimization
-
 This project showcases an advanced marketing system using an **Epsilon-Greedy Multi-Armed Bandit** to maximize campaign **profit**. Unlike traditional A/B tests that might focus solely on clicks, this system dynamically allocates budget to ad creatives that demonstrate the highest profitability in real-time, factoring in costs and conversion values.
 
 The core of the project is an interactive **Streamlit dashboard** where users can configure and run simulations. This allows for a robust comparison against A/B testing, clearly demonstrating the financial benefits of an adaptive, profit-driven approach.
