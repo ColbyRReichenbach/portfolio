@@ -297,12 +297,24 @@ html {
 .modal-right li {
   margin-bottom: 12px;
 }
+/* Add this to static/style.css */
+
 .modal-right .modal-buttons {
-  margin-top: 20px;       /* Space above the button group */
-  display: flex;
-  flex-direction: column; /* This stacks the flex items (buttons) vertically */
-  gap: 15px;              /* This will now create a 15px vertical gap between buttons */
-  align-items: center;   /* Allows buttons to wrap to the next line on very small screens if needed */
+  margin-top: 20px; /* Keeps space above the button group */
+  /* If you had 'display: flex;' here from trying side-by-side, you can remove it for this method */
+}
+
+.modal-right .modal-buttons .btn-project {
+  display: block; /* Ensures each button takes its own line if not already */
+  width: fit-content; /* Adjusts button width to its content. Or use a fixed width, or 100% */
+  margin-left: auto;  /* If width is not 100%, this helps center it */
+  margin-right: auto; /* If width is not 100%, this helps center it */
+  margin-bottom: 15px; /* << ADDS 15px SPACE BELOW EACH BUTTON */
+}
+
+/* Remove margin from the very last button to prevent extra space at the bottom */
+.modal-right .modal-buttons .btn-project:last-child {
+  margin-bottom: 0;
 }
 
 .close {
