@@ -8,19 +8,24 @@ console.log("JavaScript is running!");
  * @param {string} modalId The ID of the modal to open.
  */
 function openModal(modalId) {
+    console.log("openModal called with ID:", modalId);
     const modal = document.getElementById(modalId);
+    console.log("Modal element found:", modal);
+
     if (!modal) {
         console.error(`Modal with ID "${modalId}" not found.`);
         return;
     }
     
     modal.style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Prevent background scroll when modal is open
+    document.body.style.overflow = 'hidden';
 
     const markdownSource = modal.getAttribute('data-markdown-source');
     const container = modal.querySelector('.project-details-container');
+    console.log("Markdown container element:", container); // DEBUG
 
     if (markdownSource && container && (!container.dataset.loaded || container.innerHTML.includes('Loading'))) {
+        console.log("Fetching markdown from:", markdownSource); // DEBUG
         fetch(markdownSource)
             .then(response => {
                 if (!response.ok) {
@@ -29,18 +34,31 @@ function openModal(modalId) {
                 return response.text();
             })
             .then(text => {
-                if (typeof marked !== 'undefined') {
-                    container.innerHTML = marked.parse(text);
-                    container.dataset.loaded = 'true'; // Mark as loaded
+                console.log("Fetched raw markdown text:", text); // DEBUG: See the raw text
+                console.log("Type of 'marked' object:", typeof marked); // DEBUG: Should be 'function' or 'object'
+                
+                if (typeof marked !== 'undefined' && typeof marked.parse === 'function') { // More robust check
+                    const htmlContent = marked.parse(text);
+                    console.log("Parsed HTML content by marked.js:", htmlContent); // DEBUG: See what marked.js produced
+                    container.innerHTML = htmlContent;
+                    container.dataset.loaded = 'true'; 
                 } else {
-                    console.error('marked.js library is not loaded.');
-                    container.innerHTML = '<p>Error: Markdown parser not available.</p>';
+                    console.error('marked.js library is not loaded or marked.parse is not a function.');
+                    container.innerHTML = '<p>Error: Markdown parser not available or not working.</p>';
+                    // As a fallback, display raw text but escape it to prevent HTML injection if 'text' contains HTML
+                    // This will show the raw markdown safely if marked.js fails
+                    const pre = document.createElement('pre');
+                    pre.textContent = text;
+                    container.innerHTML = ''; // Clear "Loading..."
+                    container.appendChild(pre);
                 }
             })
             .catch(error => {
                 container.innerHTML = '<p><strong>Error:</strong> Could not load project details. Please try again later.</p>';
-                console.error('Error fetching markdown:', error);
+                console.error('Error fetching or parsing markdown:', error);
             });
+    } else if (markdownSource && !container) {
+        console.error("'.project-details-container' not found inside modal:", modalId); // DEBUG
     }
 }
 
