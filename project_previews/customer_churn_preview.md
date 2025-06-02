@@ -2,14 +2,14 @@ This project tackles the critical business challenge of customer churn. By analy
 
 The analysis involves comprehensive Exploratory Data Analysis (EDA), feature engineering to create meaningful predictors, and the development and evaluation of several machine learning classification models.
 
-**Key Highlights:**
+### **Key Highlights:**
 
 * In-depth EDA to understand customer demographics, service usage, and churn patterns.
 * Application of various feature engineering techniques to enhance model performance.
 * Built and compared multiple predictive models (such as Logistic Regression, Random Forest, and Gradient Boosting) to identify the most effective churn predictor.
 * Derived actionable insights from model interpretations to suggest targeted retention campaigns and improve customer satisfaction.
 
-**Technologies & Skills:**
+### **Core Technologies & Concepts:**
 
 * Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)
 * Machine Learning (Classification, Model Evaluation)
