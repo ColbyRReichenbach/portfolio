@@ -8,7 +8,7 @@ The analysis includes a statistical approach to A/B testing, ensuring that concl
 * Implementation of A/B testing principles to compare campaigns and determine statistically significant differences in their performance.
 * Provides actionable insights and recommendations for optimizing ad spend and improving future campaign strategies based on empirical evidence.
 
-### **Technologies & Skills:**
+### **Core Technologies & Concepts:**
 
 * Python (Pandas, NumPy, Matplotlib, Seaborn)
 * Statistical Analysis (SciPy, Statsmodels)
