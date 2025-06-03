@@ -80,6 +80,12 @@
                     })
                     .then(text => {
                         if (typeof marked !== 'undefined' && typeof marked.parse === 'function') {
+                            marked.setOptions({
+                                headerIds: true, // Crucial for ToC links
+                                gfm: true,       // Enable GitHub Flavored Markdown (recommended)
+                                breaks: false    // GitHub-like behavior for line breaks
+                            });
+                            
                             reportContentDiv.innerHTML = marked.parse(text);
 
                             // Optional: Try to set the page title from the first H1 in the Markdown
