@@ -80,7 +80,7 @@
                     })
                     .then(text => {
                         if (typeof marked !== 'undefined' && typeof marked.parse === 'function') {
-                            markedOptions.setOptions({
+                            marked.setOptions({
                                 headerIds: true, // ToC links
                                 gfm: true,       // Enable GitHub Flavored Markdown
                                 breaks: false    // GitHub-like behavior for line breaks
