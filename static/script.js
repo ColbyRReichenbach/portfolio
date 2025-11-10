@@ -84,6 +84,35 @@ window.onclick = function(event) {
 // --- ON PAGE LOAD ---
 document.addEventListener('DOMContentLoaded', function() {
 
+    // --- HEADER NAVIGATION TOGGLE ---
+    const menuToggle = document.querySelector('.menu-toggle');
+    const siteNav = document.querySelector('.site-nav');
+    const navLinks = document.querySelectorAll('.site-nav a');
+
+    if (menuToggle && siteNav) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = siteNav.classList.toggle('is-open');
+            menuToggle.classList.toggle('is-active', isOpen);
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (siteNav.classList.contains('is-open')) {
+                    siteNav.classList.remove('is-open');
+                    menuToggle.classList.remove('is-active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    }
+
+    // --- FOOTER YEAR ---
+    const footerYear = document.getElementById('footer-year');
+    if (footerYear) {
+        footerYear.textContent = new Date().getFullYear();
+    }
+
     // --- GIF HOVER FUNCTIONALITY ---
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach(card => {

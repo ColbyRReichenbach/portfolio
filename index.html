@@ -1,61 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="Portfolio of Colby Reichenbach, a biologist and data worker specializing in data analysis, visualization, and problem-solving. Open to employent, and actively job searching.">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio of Colby Reichenbach, a biologist and data worker specializing in data analysis, visualization, and problem-solving. Open to employment, and actively job searching.">
   <title>Colby Reichenbach | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRK1FSC72E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRK1FSC72E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-KRK1FSC72E');
-</script>
+    gtag('config', 'G-KRK1FSC72E');
+  </script>
 </head>
 <body>
 
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <img src="static/images/headshot.jpg" alt="Profile Picture" class="profile-pic">
-    <div class="about-info">
-      <h1>Colby R. Reichenbach</h1>
-      <p class="tagline">Scientific Thinking, Data-Driven Solutions.</p>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/colby-reichenbach/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/ColbyRReichenbach" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:colbyrreichenbach@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-        <a href="static/images/ColbyReichenbach_Resume_2025_updated.pdf" target="_blank"><i class="fa-solid fa-file"></i></a>
-      </div>
-      <p class="about-text">
-        Hi I'm Colby. With a B.S. in Biology and a Data Science minor 
-        from UNC Chapel Hill, I've spent the year since graduation applying a scientific, 
-        analytical approach to the field of data science. My focus is on dissecting complex datasets, 
-        crafting insightful visualizations, and developing practical tools to make data actionable. The 
-        projects in this portfolio illustrate these capabilities across various applications, aimed at solving 
-        problems and revealing underlying trends. I am eager to leverage my skills in a data analyst or scientist 
-        position and am open to challenging opportunities that foster growth and collaboration. I welcome you to connect via email or LinkedIn.
-      </p>
-      <a href="#portfolio" class="btn">View My Projects</a>
-    </div>
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="#top">Colby Reichenbach</a>
+    <nav class="site-nav">
+      <a href="#about">About</a>
+      <a href="#focus">Focus Areas</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="static/images/ColbyReichenbach_Resume_2025_updated.pdf" target="_blank" class="nav-resume">Resume</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
-</section>
+</header>
 
-<section id="portfolio" class="portfolio-section">
-  <div class="portfolio-container">
-    <h2>My Projects</h2>
+<main>
+  <section id="about" class="hero">
+    <div class="hero-ornament"></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">Data Analyst & Scientist</span>
+        <h1>Scientific thinking meets practical analytics.</h1>
+        <p class="intro">
+          I'm Colby, a biology-trained data professional who turns experimentation and messy data into stories teams can act on.
+          From marketing lift to customer retention, I help stakeholders see the signal - and what to do next.
+        </p>
+        <ul class="hero-highlights">
+          <li>Designs lean analytics for marketing, ecommerce, and operations teams.</li>
+          <li>Builds dashboards and decision tools that make complexity feel approachable.</li>
+          <li>Partners with collaborators to test ideas and communicate insight with clarity.</li>
+        </ul>
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn">Explore Projects</a>
+          <a href="mailto:colbyrreichenbach@gmail.com" class="btn btn-secondary">Let's Collaborate</a>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/colby-reichenbach/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/ColbyRReichenbach" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:colbyrreichenbach@gmail.com" target="_blank" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="static/images/ColbyReichenbach_Resume_2025_updated.pdf" target="_blank" aria-label="Resume"><i class="fa-solid fa-file"></i></a>
+        </div>
+      </div>
+      <div class="hero-spotlight">
+        <div class="profile-frame">
+          <img src="static/images/headshot.jpg" alt="Portrait of Colby Reichenbach" class="profile-pic">
+          <span class="availability">Open to analytics opportunities</span>
+        </div>
+        <div class="mini-card">
+          <h3>Why it works</h3>
+          <p>
+            I draw on a scientific background to question assumptions, validate hypotheses, and connect findings to real-world impact.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="focus" class="focus-section section-spacing">
+    <div class="section-heading">
+      <span class="eyebrow">What I love working on</span>
+      <h2>Impact areas</h2>
+      <p>Each project blends experimentation, storytelling, and thoughtful design to guide business decisions.</p>
+    </div>
+    <div class="focus-grid">
+      <article class="focus-card">
+        <h3>Marketing Intelligence</h3>
+        <p>Designing budget simulators, A/B testing frameworks, and lift analyses that keep campaign spend accountable.</p>
+      </article>
+      <article class="focus-card">
+        <h3>Customer Retention</h3>
+        <p>Spotlighting churn drivers and building explainable models so teams can personalize outreach with confidence.</p>
+      </article>
+      <article class="focus-card">
+        <h3>Interactive Storytelling</h3>
+        <p>Pairing dashboards and lightweight apps with narrative context so stakeholders understand the "so what."</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-section section-spacing">
+    <div class="section-heading">
+      <span class="eyebrow">Toolbox</span>
+      <h2>Skills that ship results</h2>
+      <p>From exploration to deployment, I combine reliable tooling with an experimentation mindset.</p>
+    </div>
+    <div class="skills-grid">
+      <span class="skill-chip">Python</span>
+      <span class="skill-chip">SQL</span>
+      <span class="skill-chip">Pandas</span>
+      <span class="skill-chip">Scikit-learn</span>
+      <span class="skill-chip">Streamlit</span>
+      <span class="skill-chip">Tableau</span>
+      <span class="skill-chip">Power BI</span>
+      <span class="skill-chip">A/B Testing</span>
+      <span class="skill-chip">Experiment Design</span>
+      <span class="skill-chip">Data Storytelling</span>
+      <span class="skill-chip">ETL Automation</span>
+      <span class="skill-chip">Visualization</span>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio-section section-spacing">
+    <div class="section-heading">
+      <span class="eyebrow">Selected Work</span>
+      <h2>My Projects</h2>
+      <p>Curated projects where scientific curiosity and analytics rigor delivered clarity for partners.</p>
+    </div>
     <div class="projects-grid">
-      
+
       <div class="project-card" onclick="openModal('modal_ad')">
-        <img src="static/images/campaign_performance_metrics.png" alt="Ad Performance Analysis Preview" data-static-src="static/images/campaign_performance_metrics.png"> 
+        <img src="static/images/campaign_performance_metrics.png" alt="Ad Performance Analysis Preview" data-static-src="static/images/campaign_performance_metrics.png">
         <div class="project-card-content">
-          <h3>Ad Performance Analysis and AB - Testing</h3>
+          <h3>Ad Performance Analysis & AB Testing</h3>
+          <p class="project-description">Marketing experimentation dashboard that surfaces winning spend strategies across channels.</p>
         </div>
       </div>
 
@@ -63,159 +147,188 @@
         <img src="static/images/ecommerce.png" alt="Ecommerce Analytics Dashboard Preview" data-static-src="static/images/ecommerce.png">
         <div class="project-card-content">
           <h3>Ecommerce Analytics Dashboard</h3>
+          <p class="project-description">Self-serve ecommerce cockpit with segmentation and cohort views for merchandising teams.</p>
         </div>
       </div>
 
       <div class="project-card" onclick="openModal('modal_customer_churn')">
-        <img src="static/images/Feature_Importance.png" alt="Customer Churn Analysis Preview" data-static-src="static/images/Feature_Importance.png"> 
+        <img src="static/images/Feature_Importance.png" alt="Customer Churn Analysis Preview" data-static-src="static/images/Feature_Importance.png">
         <div class="project-card-content">
           <h3>Customer Churn Analysis</h3>
+          <p class="project-description">Explainable churn modeling that ranks drivers and recommends retention plays.</p>
         </div>
       </div>
 
       <div class="project-card" onclick="openModal('modal_mlb_dash')">
-        <img src="static/images/mlb_dash.jpg" alt="MLB Award Winner Visualization Preview" data-static-src="static/images/mlb_dash.png"> 
+        <img src="static/images/mlb_dash.jpg" alt="MLB Award Winner Visualization Preview" data-static-src="static/images/mlb_dash.png">
         <div class="project-card-content">
           <h3>MLB Award Winner Visualization</h3>
+          <p class="project-description">Interactive Tableau story reimagining two decades of award voting trends.</p>
         </div>
       </div>
 
       <div class="project-card" onclick="openModal('modal_bandit')">
-        <img src="static/images/marketing_bandit.png" alt="Marketing Bandit Preview" data-static-src="static/images/marketing_bandit.png"> 
+        <img src="static/images/marketing_bandit.png" alt="Marketing Bandit Preview" data-static-src="static/images/marketing_bandit.png">
         <div class="project-card-content">
           <h3>Marketing Bandit</h3>
+          <p class="project-description">Multi-armed bandit simulator that balances exploration and ROI for ad teams.</p>
         </div>
       </div>
 
       <div class="project-card" onclick="openModal('modal_self')">
-        <img src="static/images/self_optimizing.png" alt="Self Optimizing Ad Campaign Preview" data-static-src="static/images/self_optimizing.png"> 
+        <img src="static/images/self_optimizing.png" alt="Self Optimizing Ad Campaign Preview" data-static-src="static/images/self_optimizing.png">
         <div class="project-card-content">
           <h3>Self Optimizing Ad Campaign</h3>
+          <p class="project-description">Automated campaign optimization workflow that adjusts spend based on live feedback.</p>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
-<div id="modal_ad" class="modal" 
-     data-markdown-source="project_previews/ad_performance_preview.md" 
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© <span id="footer-year">2025</span> Colby Reichenbach. Let's build something insightful.</p>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/colby-reichenbach/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/ColbyRReichenbach" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="mailto:colbyrreichenbach@gmail.com" target="_blank" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<div id="modal_ad" class="modal"
+     data-markdown-source="project_previews/ad_performance_preview.md"
      onclick="if(event.target === this){ closeModal('modal_ad'); }">
   <div class="modal-content split">
     <span class="close" onclick="closeModal('modal_ad')">&times;</span>
     <div class="modal-left">
-      <img src="static/images/campaign_performance_metrics.png" alt="Ad Performance Analysis Detail View"> 
-      </div>
+      <img src="static/images/campaign_performance_metrics.png" alt="Ad Performance Analysis Detail View">
+    </div>
     <div class="modal-right">
-      <h3>Ad Performance Analysis and AB - Testing</h3>
+      <h3>Ad Performance Analysis & AB Testing</h3>
       <hr>
       <div class="project-details-container">
         <p>Loading project details...</p>
       </div>
-      <a href="https://github.com/ColbyRReichenbach/Ad-Performance-Analysis-AB-Testing" target="_blank" class="btn btn-project">View full project on GitHub</a>
-      <a href="render_report.html?src=https://raw.githubusercontent.com/ColbyRReichenbach/Ad-Performance-Analysis-AB-Testing/refs/heads/main/report.md" target="_blank" class="btn btn-project">View Full Report</a>
-      <a href="render_report.html?src=https://raw.githubusercontent.com/ColbyRReichenbach/Ad-Performance-Analysis-AB-Testing/refs/heads/main/Summary_Report.md" target="blank" class="btn btn-project">View Summary Report</a>
+      <div class="modal-actions">
+        <a href="https://github.com/ColbyRReichenbach/Ad-Performance-Analysis-AB-Testing" target="_blank" class="btn btn-project">View full project on GitHub</a>
+        <a href="render_report.html?src=https://raw.githubusercontent.com/ColbyRReichenbach/Ad-Performance-Analysis-AB-Testing/refs/heads/main/report.md" target="_blank" class="btn btn-project">View Full Report</a>
+        <a href="render_report.html?src=https://raw.githubusercontent.com/ColbyRReichenbach/Ad-Performance-Analysis-AB-Testing/refs/heads/main/Summary_Report.md" target="_blank" class="btn btn-project">View Summary Report</a>
       </div>
+    </div>
   </div>
 </div>
 
-<div id="modal_ecommerce" class="modal" 
-     data-markdown-source="project_previews/ecommerce_preview.md" 
+<div id="modal_ecommerce" class="modal"
+     data-markdown-source="project_previews/ecommerce_preview.md"
      onclick="if(event.target === this){ closeModal('modal_ecommerce'); }">
   <div class="modal-content split">
     <span class="close" onclick="closeModal('modal_ecommerce')">&times;</span>
     <div class="modal-left">
       <img src="static/images/ecommerce.png" alt="Ecommerce Analytics Dashboard Detail View">
-      </div>
+    </div>
     <div class="modal-right">
       <h3>Ecommerce Analytics Dashboard</h3>
       <hr>
       <div class="project-details-container">
         <p>Loading project details...</p>
       </div>
-      <a href="https://github.com/ColbyRReichenbach/Ecommerce" target="_blank" class="btn btn-project">View full project on GitHub</a>
-      <a href="https://ecommerce-dhsrx49ubnacpn9adyrh9n.streamlit.app/" target="_blank" class="btn btn-project">View Live App</a>
+      <div class="modal-actions">
+        <a href="https://github.com/ColbyRReichenbach/Ecommerce" target="_blank" class="btn btn-project">View full project on GitHub</a>
+        <a href="https://ecommerce-dhsrx49ubnacpn9adyrh9n.streamlit.app/" target="_blank" class="btn btn-project">View Live App</a>
       </div>
+    </div>
   </div>
 </div>
 
-<div id="modal_customer_churn" class="modal" 
-     data-markdown-source="project_previews/customer_churn_preview.md" 
+<div id="modal_customer_churn" class="modal"
+     data-markdown-source="project_previews/customer_churn_preview.md"
      onclick="if(event.target === this){ closeModal('modal_customer_churn'); }">
   <div class="modal-content split">
     <span class="close" onclick="closeModal('modal_customer_churn')">&times;</span>
     <div class="modal-left">
-      <img src="static/images/Feature_Importance.png" alt="Customer Churn Analysis Detail View"> 
-      </div>
+      <img src="static/images/Feature_Importance.png" alt="Customer Churn Analysis Detail View">
+    </div>
     <div class="modal-right">
       <h3>Customer Churn Analysis</h3>
       <hr>
       <div class="project-details-container">
         <p>Loading project details...</p>
       </div>
-      <a href="https://github.com/ColbyRReichenbach/Customer-Churn-Prediction-Data-Insights-Retention-Strategies" target="_blank" class="btn btn-project">View full project on GitHub</a>
-      <a href="render_report.html?src=https://raw.githubusercontent.com/ColbyRReichenbach/Customer-Churn-Prediction-Data-Insights-Retention-Strategies/main/Report.md" target="_blank" class="btn btn-project">View Full Report</a>
+      <div class="modal-actions">
+        <a href="https://github.com/ColbyRReichenbach/Customer-Churn-Prediction-Data-Insights-Retention-Strategies" target="_blank" class="btn btn-project">View full project on GitHub</a>
+        <a href="render_report.html?src=https://raw.githubusercontent.com/ColbyRReichenbach/Customer-Churn-Prediction-Data-Insights-Retention-Strategies/main/Report.md" target="_blank" class="btn btn-project">View Full Report</a>
       </div>
-  </div>
-</div>
-
-<div id="modal_mlb_dash" class="modal" 
-     data-markdown-source="project_previews/mlb_dash_preview.md" 
-     onclick="if(event.target === this){ closeModal('modal_mlb_dash'); }"> {/* Corrected closeModal target here */}
-  <div class="modal-content split">
-    <span class="close" onclick="closeModal('modal_mlb_dash')">&times;</span>
-    <div class="modal-left">
-      <img src="static/images/mlb_dash.jpg" alt="MLB Award Winner Visualization Detail View">
-      </div>
-    <div class="modal-right">
-      <h3>MLB Award Winner Visualization</h3>
-      <hr>
-      <div class="project-details-container">
-        <p>Loading project details...</p> 
-        </div>
-      <a href="https://public.tableau.com/app/profile/colby.reichenbach/viz/MLBAwardWinners2000-2023v1/OverviewDash" target="_blank" class="btn btn-project">View on Tableau Public</a>
     </div>
   </div>
 </div>
 
-<div id="modal_bandit" class="modal" 
-     data-markdown-source="project_previews/marketing_bandit_preview.md" 
+<div id="modal_mlb_dash" class="modal"
+     data-markdown-source="project_previews/mlb_dash_preview.md"
+     onclick="if(event.target === this){ closeModal('modal_mlb_dash'); }">
+  <div class="modal-content split">
+    <span class="close" onclick="closeModal('modal_mlb_dash')">&times;</span>
+    <div class="modal-left">
+      <img src="static/images/mlb_dash.jpg" alt="MLB Award Winner Visualization Detail View">
+    </div>
+    <div class="modal-right">
+      <h3>MLB Award Winner Visualization</h3>
+      <hr>
+      <div class="project-details-container">
+        <p>Loading project details...</p>
+      </div>
+      <div class="modal-actions">
+        <a href="https://public.tableau.com/app/profile/colby.reichenbach/viz/MLBAwardWinners2000-2023v1/OverviewDash" target="_blank" class="btn btn-project">View on Tableau Public</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal_bandit" class="modal"
+     data-markdown-source="project_previews/marketing_bandit_preview.md"
      onclick="if(event.target === this){ closeModal('modal_bandit'); }">
   <div class="modal-content split">
     <span class="close" onclick="closeModal('modal_bandit')">&times;</span>
     <div class="modal-left">
       <img src="static/images/marketing_bandit.png" alt="Marketing Bandit Project Detail View">
-      </div>
+    </div>
     <div class="modal-right">
-      <h3>AI-Driven Ad Profit Optimization</h3> <hr>
+      <h3>AI-Driven Ad Profit Optimization</h3>
+      <hr>
       <div class="project-details-container">
         <p>Loading project details...</p>
       </div>
-      <a href="https://github.com/ColbyRReichenbach/Marketing-bandit-roi" target="_blank" class="btn btn-project">View full project on GitHub</a>
-      <a href="https://marketing-bandit-roi-rzjtitqbqc26utskvbedat.streamlit.app/" target="_blank" class="btn btn-project">View Live App</a> 
+      <div class="modal-actions">
+        <a href="https://github.com/ColbyRReichenbach/Marketing-bandit-roi" target="_blank" class="btn btn-project">View full project on GitHub</a>
+        <a href="https://marketing-bandit-roi-rzjtitqbqc26utskvbedat.streamlit.app/" target="_blank" class="btn btn-project">View Live App</a>
       </div>
+    </div>
   </div>
 </div>
 
-  <div id="modal_self" class="modal" 
-     data-markdown-source="project_previews/self_optimizing_preview.md" 
+<div id="modal_self" class="modal"
+     data-markdown-source="project_previews/self_optimizing_preview.md"
      onclick="if(event.target === this){ closeModal('modal_self'); }">
   <div class="modal-content split">
     <span class="close" onclick="closeModal('modal_self')">&times;</span>
     <div class="modal-left">
       <img src="static/images/self_optimizing.png" alt="Self Optimizing Ad Campaign Project Detail View">
-      </div>
+    </div>
     <div class="modal-right">
-      <h3>Self Optimizing Ad Campaign</h3> <hr>
+      <h3>Self Optimizing Ad Campaign</h3>
+      <hr>
       <div class="project-details-container">
         <p>Loading project details...</p>
       </div>
-      <a href="https://github.com/ColbyRReichenbach/Self-Optimizing-Ad-Campaign" target="_blank" class="btn btn-project">View full project on GitHub</a>
-      <a href="https://self-optimizing-ad-campaign-cvyuyilsfhqbprtznidsjb.streamlit.app/" target="_blank" class="btn btn-project">View Live App</a> 
+      <div class="modal-actions">
+        <a href="https://github.com/ColbyRReichenbach/Self-Optimizing-Ad-Campaign" target="_blank" class="btn btn-project">View full project on GitHub</a>
+        <a href="https://self-optimizing-ad-campaign-cvyuyilsfhqbprtznidsjb.streamlit.app/" target="_blank" class="btn btn-project">View Live App</a>
       </div>
+    </div>
   </div>
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="static/script.js"></script>
