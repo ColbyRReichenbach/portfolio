@@ -1,3 +1,5 @@
+console.log("JavaScript is running!");
+
 // --- MODAL LOGIC ---
 
 /**
@@ -31,9 +33,7 @@ function openModal(modalId) {
     const markdownSource = modal.getAttribute('data-markdown-source');
     const container = modal.querySelector('.project-details-container');
 
-    const shouldFetch = markdownSource && container && container.dataset.prefilled !== 'true';
-
-    if (shouldFetch && (!container.dataset.loaded || container.innerHTML.includes('Loading'))) {
+    if (markdownSource && container && (!container.dataset.loaded || container.innerHTML.includes('Loading'))) {
         fetch(markdownSource)
             .then(response => {
                 if (!response.ok) {
@@ -119,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const img = card.querySelector('img');
         const staticSrc = img ? img.getAttribute('data-static-src') : null;
         const gifSrc = img ? img.getAttribute('data-gif-src') : null;
-        const modalTarget = card.getAttribute('onclick');
 
         if (img && staticSrc && gifSrc && staticSrc !== gifSrc) { // Only add if sources are defined and different
             card.addEventListener('mouseenter', () => {
@@ -129,19 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 img.src = staticSrc;
             });
         }
-
-        card.addEventListener('keydown', event => {
-            const key = event.key;
-            const isActivation = key === 'Enter' || key === ' ';
-            if (isActivation && typeof card.onclick === 'function') {
-                event.preventDefault();
-                card.click();
-            } else if (isActivation && modalTarget && typeof window !== 'undefined') {
-                event.preventDefault();
-                // Fallback for inline onclick handler
-                card.click();
-            }
-        });
     });
 
     // --- GA4 Custom Event Tracking for Outbound Links in Modals ---
