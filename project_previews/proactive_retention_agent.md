@@ -9,4 +9,4 @@ A full-stack data science project that demonstrates MLOps, LLMOps, and automated
 ### Core Technologies & Concepts:
 * Python
 * GenAI - Google Gemini API
-* MLOps - COntainerize model in Docker and served via FastAPI
+* MLOps - XGboost model containerized in Docker and served via FastAPI
