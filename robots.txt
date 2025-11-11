@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://colbyrreichenbach.github.io/portfolio/sitemap.xml
+Sitemap: https://colbyrreichenbach.github.io/sitemap.xml
