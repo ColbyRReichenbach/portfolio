@@ -3,13 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfolio of Colby Reichenbach, a biologist and data worker specializing in data analysis, visualization, and problem-solving. Open to employment, and actively job searching.">
-  <title>Colby Reichenbach | Portfolio</title>
+  <meta name="description" content="Colby Reichenbach is an entry-level data analyst and junior data scientist who blends SQL, Python, Tableau, and experimentation to deliver marketing, customer retention, and product analytics insights."/>
+  <meta name="keywords" content="entry level data analyst, junior data scientist, data analyst portfolio, marketing analytics, customer retention analytics, colby reichenbach"/>
+  <meta name="author" content="Colby Reichenbach"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://colbyrreichenbach.github.io/"/>
+  <title>Colby Reichenbach | Entry-Level Data Analyst Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:title" content="Colby Reichenbach | Entry-Level Data Analyst Portfolio"/>
+  <meta property="og:description" content="Junior data analyst and scientist blending SQL, Python, Tableau, and experimentation to ship marketing, retention, and product analytics insights."/>
+  <meta property="og:url" content="https://colbyrreichenbach.github.io/"/>
+  <meta property="og:image" content="https://colbyrreichenbach.github.io/static/images/headshot.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Colby Reichenbach | Entry-Level Data Analyst Portfolio"/>
+  <meta name="twitter:description" content="Junior data analyst and scientist blending SQL, Python, Tableau, and experimentation to ship marketing, retention, and product analytics insights."/>
+  <meta name="twitter:image" content="https://colbyrreichenbach.github.io/static/images/headshot.jpg"/>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRK1FSC72E"></script>
@@ -17,23 +31,107 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-KRK1FSC72E');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://colbyrreichenbach.github.io/#website",
+        "url": "https://colbyrreichenbach.github.io/",
+        "name": "Colby Reichenbach Portfolio",
+        "description": "Entry-level data analyst and junior data scientist showcasing marketing analytics, customer retention modeling, and experimentation case studies.",
+        "publisher": {
+          "@id": "https://colbyrreichenbach.github.io/#person"
+        },
+        "potentialAction": {
+          "@type": "ContactAction",
+          "target": [
+            "mailto:colbyrreichenbach@gmail.com"
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://colbyrreichenbach.github.io/#person",
+        "name": "Colby Reichenbach",
+        "jobTitle": [
+          "Entry-Level Data Analyst",
+          "Junior Data Scientist"
+        ],
+        "url": "https://colbyrreichenbach.github.io/",
+        "image": "https://colbyrreichenbach.github.io/static/images/headshot.jpg",
+        "email": "mailto:colbyrreichenbach@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/colby-reichenbach/",
+          "https://github.com/ColbyRReichenbach"
+        ],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of North Carolina at Chapel Hill"
+        },
+        "knowsAbout": [
+          "SQL",
+          "Python",
+          "Marketing Analytics",
+          "Tableau",
+          "Machine Learning",
+          "Customer Retention",
+          "Experiment Design"
+        ],
+        "description": "Entry-level data analyst blending biology, statistics, and experimentation to ship actionable insights for marketing, product, and retention teams."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://colbyrreichenbach.github.io/#faq-structured-data",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What types of analytics roles is Colby Reichenbach targeting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Colby is actively pursuing entry-level data analyst, junior data scientist, and analytics engineer roles where he can own SQL pipelines, deliver Python-based automation, and communicate insights to marketing and product stakeholders."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Colby translate messy datasets into stakeholder-ready narratives?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "He combines hypothesis-driven exploration with reproducible notebooks, integrates Tableau and Streamlit dashboards, and closes with executive-ready summaries that explain the why behind every recommendation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which analytics technologies does Colby use on a daily basis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "His toolset includes Python, Pandas, SQL, dbt, Tableau, Power BI, Streamlit, scikit-learn, and modern A/B testing frameworks augmented by Google Analytics 4 event tracking."
+            }
+          }
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 <body>
-
 <header class="site-header" id="top">
   <div class="header-inner">
     <a class="brand" href="#top">Colby Reichenbach</a>
-    <nav class="site-nav">
+    <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
       <a href="#about">About</a>
       <a href="#focus">Focus Areas</a>
-      <a href="#portfolio">Projects</a>
+      <a href="#services">Services</a>
       <a href="#skills">Skills</a>
-      <a href="static/images/ColbyReichenbach_Analyst_Resume.pdf" target="_blank" class="nav-resume">Resume</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#faq">FAQ</a>
+      <a href="static/images/ColbyReichenbach_Analyst_Resume.pdf" target="_blank" rel="noopener" class="nav-resume">Resume</a>
     </nav>
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
       <span></span>
       <span></span>
       <span></span>
@@ -42,82 +140,101 @@
 </header>
 
 <main>
-  <section id="about" class="hero">
+  <section id="about" class="hero" aria-labelledby="hero-title">
     <div class="hero-ornament"></div>
     <div class="hero-inner">
       <div class="hero-copy">
-        <span class="eyebrow">Data Analyst & Scientist</span>
-        <h1>Scientific thinking meets practical analytics.</h1>
+        <span class="eyebrow">Entry-Level Data Analyst & Scientist</span>
+        <h1 id="hero-title">Scientific rigor meets business-ready analytics.</h1>
         <p class="intro">
-          Hi, I'm Colby. A first-generation college graduate from the University of North Carolina at Chapel Hill, my journey 
-          has been fueled by a restless curiosity. My academic studies, blending Biology with Data Science, trained 
-          me to use a hypothesis-driven, analytical approach to find answers in complex, messy data.</p>
-          <p class="intro"> 
-          I've found that analytics, machine learning, and new generative AI tools are the perfect way to itch 
-          my passion for continuous learning. I love digging into data to build solutions, uncover the "why" behind outcomes, 
-          and help people understand data through clear insights.</p>  
-          <p class="intro">
-          These projects are a showcase of that mindset. Welcome to my portfolio. I invite you to explore my work.</p>
-          
+          I'm Colby Reichenbach, an entry-level data analyst who brings a biology and statistics background to messy marketing, product, and customer datasets. I partner with growth teams to uncover why metrics move, validate hypotheses with experimentation, and translate results into decisions that boost revenue and retention.
+        </p>
+        <p class="intro">
+          From SQL modeling and Python automation to Tableau storytelling and GA4 instrumentation, I build analytics ecosystems that hiring managers can trust. I'm currently open to junior data analyst, data scientist, or analytics engineer opportunities (remote or hybrid).
         </p>
         <ul class="hero-highlights">
-          <li>Enhanced analytics through data science, and technical proficiencies.</li>
-          <li>Builds dashboards and decision tools that make complexity feel approachable.</li>
-          <li>Integrates use of GenAI to accelerate workflows.</li>
+          <li>Designs experimentation roadmaps that accelerate go-to-market learning cycles.</li>
+          <li>Owns SQL, dbt, and Python pipelines that keep dashboards fresh and auditable.</li>
+          <li>Delivers stakeholder-ready narratives that connect model outputs to outcomes.</li>
         </ul>
         <div class="hero-cta">
           <a href="#portfolio" class="btn">Explore Projects</a>
-          <a href="mailto:colbyrreichenbach@gmail.com" class="btn btn-secondary">Let's Collaborate</a>
+          <a href="mailto:colbyrreichenbach@gmail.com" class="btn btn-secondary">Schedule a Coffee Chat</a>
         </div>
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/colby-reichenbach/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/ColbyRReichenbach" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="mailto:colbyrreichenbach@gmail.com" target="_blank" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          <a href="static/images/ColbyReichenbach_Analyst_Resume.pdf" target="_blank" aria-label="Resume"><i class="fa-solid fa-file"></i></a>
+          <a href="https://www.linkedin.com/in/colby-reichenbach/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/ColbyRReichenbach" target="_blank" rel="noopener" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+          <a href="mailto:colbyrreichenbach@gmail.com" aria-label="Email Colby"><i class="fa-solid fa-envelope"></i></a>
+          <a href="static/images/ColbyReichenbach_Analyst_Resume.pdf" target="_blank" rel="noopener" aria-label="Download Colby's resume"><i class="fa-solid fa-file"></i></a>
         </div>
       </div>
       <div class="hero-spotlight">
         <div class="profile-frame">
-          <img src="static/images/headshot.jpg" alt="Portrait of Colby Reichenbach" class="profile-pic">
+          <img src="static/images/headshot.jpg" alt="Colby Reichenbach smiling in a professional portrait" class="profile-pic" width="320" height="320" loading="eager">
           <span class="availability">Open to data-centric opportunities</span>
         </div>
         <div class="mini-card">
-          <h3>Why it works</h3>
+          <h3>Why teams hire me</h3>
           <p>
-            I draw on a scientific background to question assumptions, validate hypotheses, and connect findings to real-world impact.
+            I combine scientific experimentation with marketing intuition. That means faster test cycles, clearer retention playbooks, and dashboards that leadership actually checks.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="focus" class="focus-section section-spacing">
+  <section id="focus" class="focus-section section-spacing" aria-labelledby="focus-title">
     <div class="section-heading">
       <span class="eyebrow">What I love working on</span>
-      <h2>Impact areas</h2>
-      <p>Each project blends experimentation, storytelling, and thoughtful design to guide business decisions.</p>
+      <h2 id="focus-title">Impact areas</h2>
+      <p>Each case study pairs experimentation, storytelling, and thoughtful design to guide business decisions for marketing, product, and revenue teams.</p>
     </div>
     <div class="focus-grid">
       <article class="focus-card">
         <h3>Marketing Intelligence</h3>
-        <p>Designing budget simulators, A/B testing frameworks, and lift analyses that keep campaign spend accountable.</p>
+        <p>Designing budget simulators, incrementality studies, and lift analyses that keep paid media spend accountable.</p>
       </article>
       <article class="focus-card">
         <h3>Customer Retention</h3>
-        <p>Spotlighting churn drivers and building explainable models so teams can personalize outreach with confidence.</p>
+        <p>Spotlighting churn drivers with explainable models so lifecycle teams can personalize outreach with confidence.</p>
       </article>
-      <article class="focus-card">
-        <h3>Interactive Storytelling</h3>
-        <p>Pairing dashboards and lightweight apps with narrative context so stakeholders understand the "so what."</p>
-      </article>
+        <article class="focus-card">
+          <h3>Interactive Storytelling</h3>
+          <p>Pairing dashboards and lightweight apps with narrative context so stakeholders understand the "so what."</p>
       </article>
     </div>
   </section>
 
-  <section id="skills" class="skills-section section-spacing">
+  <section id="services" class="services-section section-spacing" aria-labelledby="services-title">
+    <div class="section-heading">
+      <span class="eyebrow">How I contribute on day one</span>
+      <h2 id="services-title">Analytics services for hiring teams</h2>
+      <p>Whether you need a hands-on analyst for a seed-stage startup or an insights partner for a scaled org, these are the engagements I can lead immediately.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <h3>Full-Funnel Marketing Analytics</h3>
+        <p>Stand up SQL models and GA4 tracking, analyze campaign ROI, and recommend budget reallocation grounded in lift and payback periods.</p>
+      </article>
+      <article class="service-card">
+        <h3>Customer Health & Retention Modeling</h3>
+        <p>Score churn risk with explainable ML, segment users by behavior, and draft playbooks that CX, product, and sales can act on quickly.</p>
+      </article>
+      <article class="service-card">
+        <h3>Experimentation & Product Insights</h3>
+        <p>Design A/B tests, run sequential analyses, and translate results into roadmap decisions that improve onboarding and activation.</p>
+      </article>
+      <article class="service-card">
+        <h3>Executive Storytelling & Self-Serve BI</h3>
+        <p>Ship Tableau, Power BI, or Streamlit dashboards with clear annotations so stakeholders can answer their own questions without losing nuance.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-section section-spacing" aria-labelledby="skills-title">
     <div class="section-heading">
       <span class="eyebrow">Toolbox</span>
-      <h2>Skills that ship results</h2>
+      <h2 id="skills-title">Skills that ship results</h2>
       <p>From exploration to deployment, I combine reliable tooling with an experimentation mindset.</p>
     </div>
     <div class="skills-grid">
@@ -128,80 +245,127 @@
       <span class="skill-chip">Streamlit</span>
       <span class="skill-chip">Tableau</span>
       <span class="skill-chip">Power BI</span>
+      <span class="skill-chip">dbt</span>
       <span class="skill-chip">A/B Testing</span>
       <span class="skill-chip">Experiment Design</span>
       <span class="skill-chip">Data Storytelling</span>
       <span class="skill-chip">ETL Automation</span>
-      <span class="skill-chip">Visualization</span>
       <span class="skill-chip">GenAI / LLM Integration</span>
       <span class="skill-chip">Cross-Functional Communication</span>
     </div>
   </section>
 
-  <section id="portfolio" class="portfolio-section section-spacing">
+  <section id="portfolio" class="portfolio-section section-spacing" aria-labelledby="portfolio-title">
     <div class="section-heading">
       <span class="eyebrow">Selected Work</span>
-      <h2>My Projects</h2>
-      <p>Curated projects where scientific curiosity and analytics delivered clarity for partners.</p>
+      <h2 id="portfolio-title">Analytics projects with business impact</h2>
+      <p>Explore the hands-on case studies that employers ask about: marketing experimentation, customer retention, sports analytics, and reinforcement learning for ad spend.</p>
     </div>
     <div class="projects-grid">
-
-      <div class="project-card" onclick="openModal('modal_ad')">
-        <img src="static/images/campaign_performance_metrics.png" alt="Ad Performance Analysis Preview" data-static-src="static/images/campaign_performance_metrics.png">
+      <article class="project-card" onclick="openModal('modal_ad')" role="button" tabindex="0" aria-label="Open Ad Performance Analysis project details">
+        <img src="static/images/campaign_performance_metrics.png" alt="Dashboard showing marketing channel performance metrics" data-static-src="static/images/campaign_performance_metrics.png" loading="lazy" width="640" height="360">
         <div class="project-card-content">
-          <h3>Ad Performance Analysis & AB Testing</h3>
-          <p class="project-description">Marketing experimentation dashboard that surfaces winning spend strategies across channels.</p>
+          <h3>Ad Performance Analysis & A/B Testing</h3>
+          <p class="project-description">Built a marketing experimentation dashboard that surfaces winning creative spend strategies and quantifies lift.</p>
         </div>
-      </div>
+      </article>
 
-      <div class="project-card" onclick="openModal('modal_ecommerce')">
-        <img src="static/images/ecommerce.png" alt="Ecommerce Analytics Dashboard Preview" data-static-src="static/images/ecommerce.png">
+      <article class="project-card" onclick="openModal('modal_ecommerce')" role="button" tabindex="0" aria-label="Open Ecommerce Analytics Dashboard project details">
+        <img src="static/images/ecommerce.png" alt="Streamlit ecommerce analytics dashboard preview" data-static-src="static/images/ecommerce.png" loading="lazy" width="640" height="360">
         <div class="project-card-content">
           <h3>Ecommerce Analytics Dashboard</h3>
-          <p class="project-description">Self-serve ecommerce cockpit with segmentation and cohort views for merchandising teams.</p>
+          <p class="project-description">Delivered a self-serve ecommerce cockpit with segmentation, cohorts, and anomaly monitoring for revenue teams.</p>
         </div>
-      </div>
+      </article>
 
-      <div class="project-card" onclick="openModal('modal_customer_churn')">
-        <img src="static/images/Feature_Importance.png" alt="Customer Churn Analysis Preview" data-static-src="static/images/Feature_Importance.png">
+      <article class="project-card" onclick="openModal('modal_customer_churn')" role="button" tabindex="0" aria-label="Open Customer Churn Analysis project details">
+        <img src="static/images/Feature_Importance.png" alt="Feature importance chart explaining churn drivers" data-static-src="static/images/Feature_Importance.png" loading="lazy" width="640" height="360">
         <div class="project-card-content">
           <h3>Customer Churn Analysis</h3>
-          <p class="project-description">Explainable churn modeling that ranks drivers and recommends retention plays.</p>
+          <p class="project-description">Shipped explainable churn modeling that ranks risk drivers and recommends proactive retention plays.</p>
         </div>
-      </div>
+      </article>
 
-      <div class="project-card" onclick="openModal('modal_mlb_dash')">
-        <img src="static/images/mlb_dash.jpg" alt="MLB Award Winner Visualization Preview" data-static-src="static/images/mlb_dash.png">
+      <article class="project-card" onclick="openModal('modal_mlb_dash')" role="button" tabindex="0" aria-label="Open MLB Award Winner Visualization project details">
+        <img src="static/images/mlb_dash.jpg" alt="Tableau visualization of MLB award winners from 2000 to 2023" data-static-src="static/images/mlb_dash.jpg" loading="lazy" width="640" height="360">
         <div class="project-card-content">
           <h3>MLB Award Winner Visualization</h3>
-          <p class="project-description">Interactive Tableau story reimagining two decades of award voting trends.</p>
+          <p class="project-description">Created an interactive Tableau story that reimagines two decades of award voting trends and player performance.</p>
         </div>
-      </div>
+      </article>
 
-      <div class="project-card" onclick="openModal('modal_bandit')">
-        <img src="static/images/marketing_bandit.png" alt="Marketing Bandit Preview" data-static-src="static/images/marketing_bandit.png">
+      <article class="project-card" onclick="openModal('modal_bandit')" role="button" tabindex="0" aria-label="Open AI-Driven Ad Profit Optimization project details">
+        <img src="static/images/marketing_bandit.png" alt="Marketing multi-armed bandit simulation dashboard" data-static-src="static/images/marketing_bandit.png" loading="lazy" width="640" height="360">
         <div class="project-card-content">
-          <h3>Marketing Bandit</h3>
-          <p class="project-description">Multi-armed bandit simulator that balances exploration and ROI for ad teams.</p>
+          <h3>AI-Driven Ad Profit Optimization</h3>
+          <p class="project-description">Simulated epsilon-greedy bandits versus A/B tests to prove how adaptive bidding improves marketing ROI.</p>
         </div>
-      </div>
+      </article>
 
-      <div class="project-card" onclick="openModal('modal_self')">
-        <img src="static/images/self_optimizing.png" alt="Self Optimizing Ad Campaign Preview" data-static-src="static/images/self_optimizing.png">
+      <article class="project-card" onclick="openModal('modal_self')" role="button" tabindex="0" aria-label="Open Self Optimizing Ad Campaign project details">
+        <img src="static/images/self_optimizing.png" alt="Thompson sampling ad optimization dashboard" data-static-src="static/images/self_optimizing.png" loading="lazy" width="640" height="360">
         <div class="project-card-content">
           <h3>Self Optimizing Ad Campaign</h3>
-          <p class="project-description">Automated campaign optimization workflow that adjusts spend based on live feedback.</p>
+          <p class="project-description">Built a Thompson Sampling simulator that proves faster convergence on profitable ad creatives.</p>
         </div>
-      </div>
+      </article>
 
-      <div class="project-card" onclick="openModal('modal_proactive')">
-        <img src="static/images/proactive_retention_agent.png" alt="Proactive Retention Agent Preview" data-static-src="static/images/proactive_retention_agent.png">
+      <article class="project-card" onclick="openModal('modal_proactive')" role="button" tabindex="0" aria-label="Open Proactive Retention Agent project details">
+        <img src="static/images/proactive_retention_agent.png" alt="Workflow diagram for proactive retention agent" data-static-src="static/images/proactive_retention_agent.png" loading="lazy" width="640" height="360">
         <div class="project-card-content">
           <h3>Proactive Retention Agent</h3>
-          <p class="project-description">Automated data analysis pipeline that creates a prioritized list for retention teams.</p>
+          <p class="project-description">Automated churn scoring, LLM ticket analysis, and prioritization for enterprise retention teams.</p>
         </div>
-      </div>
+      </article>
+    </div>
+    <div class="portfolio-links">
+      <a href="https://github.com/ColbyRReichenbach" target="_blank" rel="noopener">View more repos on GitHub</a>
+      <a href="static/images/ColbyReichenbach_Analyst_Resume.pdf" target="_blank" rel="noopener">Download resume PDF</a>
+    </div>
+  </section>
 
+  <section class="narrative-section section-spacing" aria-labelledby="narrative-title">
+      <div class="section-heading">
+        <span class="eyebrow">Why it matters</span>
+        <h2 id="narrative-title">Translating analytics into hiring-ready value</h2>
+        <p>The through-line across every project is helping a team make a faster, smarter decision. Here's how that shows up in junior data roles.</p>
+    </div>
+    <div class="narrative-content">
+      <p>
+        <strong>Marketing & Growth:</strong> Delivered channel-mix recommendations that reduced wasted ad spend while keeping CAC within target. Streamlit experimentation dashboards let performance marketers monitor uplift in real time and reallocate dollars with confidence.
+      </p>
+      <p>
+        <strong>Customer Retention:</strong> Built churn risk scores with explainable ML and combined them with LLM-powered feedback triage. Retention managers receive prioritized accounts plus the language to personalize outreach, shrinking time-to-value for every campaign.
+      </p>
+      <p>
+        <strong>Product & Experimentation:</strong> Applied sequential testing and Bayesian bandits to accelerate learning. Product managers get to decisions faster because they can see how activation, adoption, and revenue respond without waiting on rigid test plans.
+      </p>
+    </div>
+  </section>
+
+  <section id="faq" class="faq-section section-spacing" aria-labelledby="faq-title">
+    <div class="section-heading">
+      <span class="eyebrow">FAQs</span>
+      <h2 id="faq-title">Questions hiring managers often ask</h2>
+      <p>Short answers for recruiters, hiring managers, and peers evaluating me for their next analytics role.</p>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>What types of analytics roles are you targeting?</summary>
+        <p>I'm pursuing entry-level data analyst, junior data scientist, and analytics engineer roles where I can own SQL pipelines, automate reporting in Python, and partner with marketing or product teams.</p>
+      </details>
+      <details>
+        <summary>How do you turn messy datasets into stakeholder-ready insights?</summary>
+        <p>I start with hypothesis-driven exploration, clean and model data in reproducible notebooks, then layer in Tableau or Streamlit dashboards backed by executive-ready summaries.</p>
+      </details>
+      <details>
+        <summary>Which tools and workflows are you most comfortable with?</summary>
+        <p>Python, Pandas, SQL, dbt, Tableau, Power BI, Streamlit, scikit-learn, Airflow, GA4, and modern A/B testing frameworks. I also integrate generative AI for documentation and ideation.</p>
+      </details>
+      <details>
+        <summary>Where are you located and what is your work preference?</summary>
+        <p>I'm based in North Carolina and open to remote or hybrid opportunities across the United States.</p>
+      </details>
     </div>
   </section>
 </main>
@@ -210,168 +374,215 @@
   <div class="footer-inner">
     <p>© <span id="footer-year">2025</span> Colby Reichenbach. Let's build something insightful.</p>
     <div class="footer-social">
-      <a href="https://www.linkedin.com/in/colby-reichenbach/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com/ColbyRReichenbach" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="mailto:colbyrreichenbach@gmail.com" target="_blank" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/colby-reichenbach/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/ColbyRReichenbach" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="mailto:colbyrreichenbach@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
     </div>
   </div>
 </footer>
 
-<div id="modal_ad" class="modal"
-     data-markdown-source="project_previews/ad_performance_preview.md"
+<div id="modal_ad" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal_ad_title"
      onclick="if(event.target === this){ closeModal('modal_ad'); }">
   <div class="modal-content split">
-    <span class="close" onclick="closeModal('modal_ad')">&times;</span>
+    <span class="close" onclick="closeModal('modal_ad')" aria-label="Close Ad Performance Analysis modal">&times;</span>
     <div class="modal-left">
-      <img src="static/images/campaign_performance_metrics.png" alt="Ad Performance Analysis Detail View">
+      <img src="static/images/campaign_performance_metrics.png" alt="Ad performance dashboard showing CTR and conversion metrics" loading="lazy" width="640" height="360">
     </div>
     <div class="modal-right">
-      <h3>Ad Performance Analysis & AB Testing</h3>
+      <h3 id="modal_ad_title">Ad Performance Analysis & A/B Testing</h3>
       <hr>
-      <div class="project-details-container">
-        <p>Loading project details...</p>
+      <div class="project-details-container" data-prefilled="true">
+        <p>This case study analyzes digital advertising performance using controlled A/B tests to surface winning creative strategies. I engineered a marketing experimentation workflow in Python and SQL that compares click-through rate (CTR), conversion rate, and cost efficiency across creatives.</p>
+        <h4>Why it matters</h4>
+        <ul>
+          <li>Implemented hypothesis-driven A/B tests that reveal statistically significant lifts in CTR and conversions.</li>
+          <li>Delivered campaign dashboards that marketing leaders use to redistribute spend toward profitable channels.</li>
+          <li>Translated metrics into actionable recommendations for optimizing bids, creative, and landing pages.</li>
+        </ul>
+        <h4>Tooling & methods</h4>
+        <p>Python, Pandas, NumPy, SciPy, Statsmodels, Matplotlib, and marketing analytics KPIs.</p>
       </div>
       <div class="modal-actions">
-        <a href="https://github.com/ColbyRReichenbach/Ad-Performance-Analysis-AB-Testing" target="_blank" class="btn btn-project">View full project on GitHub</a>
-        <a href="render_report.html?src=https://raw.githubusercontent.com/ColbyRReichenbach/Ad-Performance-Analysis-AB-Testing/refs/heads/main/report.md" target="_blank" class="btn btn-project">View Full Report</a>
-        <a href="render_report.html?src=https://raw.githubusercontent.com/ColbyRReichenbach/Ad-Performance-Analysis-AB-Testing/refs/heads/main/Summary_Report.md" target="_blank" class="btn btn-project">View Summary Report</a>
+        <a href="https://github.com/ColbyRReichenbach/Ad-Performance-Analysis-AB-Testing" target="_blank" rel="noopener" class="btn btn-project">View full project on GitHub</a>
+        <a href="render_report.html?src=https://raw.githubusercontent.com/ColbyRReichenbach/Ad-Performance-Analysis-AB-Testing/refs/heads/main/report.md" target="_blank" rel="noopener" class="btn btn-project">View Full Report</a>
+        <a href="render_report.html?src=https://raw.githubusercontent.com/ColbyRReichenbach/Ad-Performance-Analysis-AB-Testing/refs/heads/main/Summary_Report.md" target="_blank" rel="noopener" class="btn btn-project">View Summary Report</a>
       </div>
     </div>
   </div>
 </div>
 
-<div id="modal_ecommerce" class="modal"
-     data-markdown-source="project_previews/ecommerce_preview.md"
+<div id="modal_ecommerce" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal_ecommerce_title"
      onclick="if(event.target === this){ closeModal('modal_ecommerce'); }">
   <div class="modal-content split">
-    <span class="close" onclick="closeModal('modal_ecommerce')">&times;</span>
+    <span class="close" onclick="closeModal('modal_ecommerce')" aria-label="Close Ecommerce Analytics modal">&times;</span>
     <div class="modal-left">
-      <img src="static/images/ecommerce.png" alt="Ecommerce Analytics Dashboard Detail View">
+      <img src="static/images/ecommerce.png" alt="Streamlit ecommerce dashboard showing KPI trends" loading="lazy" width="640" height="360">
     </div>
     <div class="modal-right">
-      <h3>Ecommerce Analytics Dashboard</h3>
+      <h3 id="modal_ecommerce_title">Ecommerce Analytics Dashboard</h3>
       <hr>
-      <div class="project-details-container">
-        <p>Loading project details...</p>
+      <div class="project-details-container" data-prefilled="true">
+        <p>This internal analytics dashboard consolidates 2.5 years of ecommerce transactions into a single Streamlit app. Stakeholders can monitor revenue, customer acquisition, and product performance while exploring cohorts by geography and time horizon.</p>
+        <h4>Why it matters</h4>
+        <ul>
+          <li>Visualized KPIs like monthly revenue, average order value, and retention rates to guide merchandising strategy.</li>
+          <li>Enabled dynamic filtering so leaders can spot anomalies and drill into lagging product categories.</li>
+          <li>Centralized disparate data sources into a trusted, self-serve dashboard for marketing and operations.</li>
+        </ul>
+        <h4>Tooling & methods</h4>
+        <p>Python, Streamlit, Pandas, Plotly, PostgreSQL (NeonDB), and modern BI design patterns.</p>
       </div>
       <div class="modal-actions">
-        <a href="https://github.com/ColbyRReichenbach/Ecommerce" target="_blank" class="btn btn-project">View full project on GitHub</a>
-        <a href="https://ecommerce-dhsrx49ubnacpn9adyrh9n.streamlit.app/" target="_blank" class="btn btn-project">View Live App</a>
+        <a href="https://github.com/ColbyRReichenbach/Ecommerce" target="_blank" rel="noopener" class="btn btn-project">View full project on GitHub</a>
+        <a href="https://ecommerce-dhsrx49ubnacpn9adyrh9n.streamlit.app/" target="_blank" rel="noopener" class="btn btn-project">View Live App</a>
       </div>
     </div>
   </div>
 </div>
 
-<div id="modal_customer_churn" class="modal"
-     data-markdown-source="project_previews/customer_churn_preview.md"
+<div id="modal_customer_churn" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal_customer_churn_title"
      onclick="if(event.target === this){ closeModal('modal_customer_churn'); }">
   <div class="modal-content split">
-    <span class="close" onclick="closeModal('modal_customer_churn')">&times;</span>
+    <span class="close" onclick="closeModal('modal_customer_churn')" aria-label="Close Customer Churn modal">&times;</span>
     <div class="modal-left">
-      <img src="static/images/Feature_Importance.png" alt="Customer Churn Analysis Detail View">
+      <img src="static/images/Feature_Importance.png" alt="Feature importance plot highlighting churn drivers" loading="lazy" width="640" height="360">
     </div>
     <div class="modal-right">
-      <h3>Customer Churn Analysis</h3>
+      <h3 id="modal_customer_churn_title">Customer Churn Analysis</h3>
       <hr>
-      <div class="project-details-container">
-        <p>Loading project details...</p>
+      <div class="project-details-container" data-prefilled="true">
+        <p>This telecom churn project combines EDA, feature engineering, and predictive modeling to forecast which customers are likely to leave. The result is an explainable retention playbook tied to concrete actions.</p>
+        <h4>Why it matters</h4>
+        <ul>
+          <li>Evaluated logistic regression, random forest, and gradient boosting models to maximize recall on at-risk users.</li>
+          <li>Mapped churn drivers like contract length, payment type, and service issues to tailored retention offers.</li>
+          <li>Produced executive summaries that help CX teams prioritize follow-up with the highest lifetime value accounts.</li>
+        </ul>
+        <h4>Tooling & methods</h4>
+        <p>Python, Pandas, NumPy, scikit-learn, feature importance analysis, and retention strategy design.</p>
       </div>
       <div class="modal-actions">
-        <a href="https://github.com/ColbyRReichenbach/Customer-Churn-Prediction-Data-Insights-Retention-Strategies" target="_blank" class="btn btn-project">View full project on GitHub</a>
-        <a href="render_report.html?src=https://raw.githubusercontent.com/ColbyRReichenbach/Customer-Churn-Prediction-Data-Insights-Retention-Strategies/main/Report.md" target="_blank" class="btn btn-project">View Full Report</a>
+        <a href="https://github.com/ColbyRReichenbach/Customer-Churn-Prediction-Data-Insights-Retention-Strategies" target="_blank" rel="noopener" class="btn btn-project">View full project on GitHub</a>
+        <a href="render_report.html?src=https://raw.githubusercontent.com/ColbyRReichenbach/Customer-Churn-Prediction-Data-Insights-Retention-Strategies/main/Report.md" target="_blank" rel="noopener" class="btn btn-project">View Full Report</a>
       </div>
     </div>
   </div>
 </div>
 
-<div id="modal_mlb_dash" class="modal"
-     data-markdown-source="project_previews/mlb_dash_preview.md"
+<div id="modal_mlb_dash" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal_mlb_dash_title"
      onclick="if(event.target === this){ closeModal('modal_mlb_dash'); }">
   <div class="modal-content split">
-    <span class="close" onclick="closeModal('modal_mlb_dash')">&times;</span>
+    <span class="close" onclick="closeModal('modal_mlb_dash')" aria-label="Close MLB Dashboard modal">&times;</span>
     <div class="modal-left">
-      <img src="static/images/mlb_dash.jpg" alt="MLB Award Winner Visualization Detail View">
+      <img src="static/images/mlb_dash.jpg" alt="MLB award visualization in Tableau" loading="lazy" width="640" height="360">
     </div>
     <div class="modal-right">
-      <h3>MLB Award Winner Visualization</h3>
+      <h3 id="modal_mlb_dash_title">MLB Award Winner Visualization</h3>
       <hr>
-      <div class="project-details-container">
-        <p>Loading project details...</p>
+      <div class="project-details-container" data-prefilled="true">
+        <p>An interactive Tableau dashboard built on the Lahman Baseball Database to explore MVP, Cy Young, and Silver Slugger winners from 2000–2023. Users can slice trends by league, award, and season.</p>
+        <h4>Why it matters</h4>
+        <ul>
+          <li>Integrated SQL and Python data prep with Tableau to present a clean, interactive sports analytics experience.</li>
+          <li>Highlights performance metrics that explain why each player earned recognition, aiding fan and analyst storytelling.</li>
+          <li>Demonstrates my ability to manage end-to-end BI pipelines and deliver visually compelling dashboards.</li>
+        </ul>
+        <h4>Tooling & methods</h4>
+        <p>Tableau, SQL, Python (Pandas), baseball analytics, and dashboard UX design.</p>
       </div>
       <div class="modal-actions">
-        <a href="https://public.tableau.com/app/profile/colby.reichenbach/viz/MLBAwardWinners2000-2023v1/OverviewDash" target="_blank" class="btn btn-project">View on Tableau Public</a>
+        <a href="https://public.tableau.com/app/profile/colby.reichenbach/viz/MLBAwardWinners2000-2023v1/OverviewDash" target="_blank" rel="noopener" class="btn btn-project">View on Tableau Public</a>
       </div>
     </div>
   </div>
 </div>
 
-<div id="modal_bandit" class="modal"
-     data-markdown-source="project_previews/marketing_bandit_preview.md"
+<div id="modal_bandit" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal_bandit_title"
      onclick="if(event.target === this){ closeModal('modal_bandit'); }">
   <div class="modal-content split">
-    <span class="close" onclick="closeModal('modal_bandit')">&times;</span>
+    <span class="close" onclick="closeModal('modal_bandit')" aria-label="Close Marketing Bandit modal">&times;</span>
     <div class="modal-left">
-      <img src="static/images/marketing_bandit.png" alt="Marketing Bandit Project Detail View">
+      <img src="static/images/marketing_bandit.png" alt="Multi-armed bandit marketing simulation interface" loading="lazy" width="640" height="360">
     </div>
     <div class="modal-right">
-      <h3>AI-Driven Ad Profit Optimization</h3>
+      <h3 id="modal_bandit_title">AI-Driven Ad Profit Optimization</h3>
       <hr>
-      <div class="project-details-container">
-        <p>Loading project details...</p>
+      <div class="project-details-container" data-prefilled="true">
+        <p>This reinforcement learning simulator compares an epsilon-greedy multi-armed bandit to traditional A/B testing. Marketing leaders can see how adaptive bidding boosts profit in real time.</p>
+        <h4>Why it matters</h4>
+        <ul>
+          <li>Quantifies the revenue uplift of bandit strategies over static tests in a format accessible to non-technical marketers.</li>
+          <li>Includes tunable parameters and simulation runs so analysts can stress-test scenarios before deploying on real spend.</li>
+          <li>Demonstrates how advanced experimentation can sit alongside everyday marketing workflows.</li>
+        </ul>
+        <h4>Tooling & methods</h4>
+        <p>Python, Streamlit, Pandas, NumPy, Matplotlib, reinforcement learning (multi-armed bandits), and Monte Carlo simulation.</p>
       </div>
       <div class="modal-actions">
-        <a href="https://github.com/ColbyRReichenbach/Marketing-bandit-roi" target="_blank" class="btn btn-project">View full project on GitHub</a>
-        <a href="https://marketing-bandit-roi-rzjtitqbqc26utskvbedat.streamlit.app/" target="_blank" class="btn btn-project">View Live App</a>
+        <a href="https://github.com/ColbyRReichenbach/Marketing-bandit-roi" target="_blank" rel="noopener" class="btn btn-project">View full project on GitHub</a>
+        <a href="https://marketing-bandit-roi-rzjtitqbqc26utskvbedat.streamlit.app/" target="_blank" rel="noopener" class="btn btn-project">View Live App</a>
       </div>
     </div>
   </div>
 </div>
 
-<div id="modal_self" class="modal"
-     data-markdown-source="project_previews/self_optimizing_preview.md"
+<div id="modal_self" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal_self_title"
      onclick="if(event.target === this){ closeModal('modal_self'); }">
   <div class="modal-content split">
-    <span class="close" onclick="closeModal('modal_self')">&times;</span>
+    <span class="close" onclick="closeModal('modal_self')" aria-label="Close Self Optimizing Ad Campaign modal">&times;</span>
     <div class="modal-left">
-      <img src="static/images/self_optimizing.png" alt="Self Optimizing Ad Campaign Project Detail View">
+      <img src="static/images/self_optimizing.png" alt="Thompson sampling simulation comparing ad creatives" loading="lazy" width="640" height="360">
     </div>
     <div class="modal-right">
-      <h3>Self Optimizing Ad Campaign</h3>
+      <h3 id="modal_self_title">Self Optimizing Ad Campaign</h3>
       <hr>
-      <div class="project-details-container">
-        <p>Loading project details...</p>
+      <div class="project-details-container" data-prefilled="true">
+        <p>This interactive web application simulates a Thompson Sampling bandit to highlight how adaptive ad spend can consistently outperform fixed A/B testing in both clicks and ROI.</p>
+        <h4>Why it matters</h4>
+        <ul>
+          <li>Helps growth teams visualize how quickly the algorithm converges on winning creatives compared to static tests.</li>
+          <li>Demonstrates statistical rigor with multiple runs, confidence intervals, and Bayesian reasoning.</li>
+          <li>Provides a teaching tool for stakeholders considering reinforcement learning for acquisition spend.</li>
+        </ul>
+        <h4>Tooling & methods</h4>
+        <p>Python, Streamlit, Pandas, NumPy, SciPy, Bayesian statistics, Thompson Sampling, and marketing analytics.</p>
       </div>
       <div class="modal-actions">
-        <a href="https://github.com/ColbyRReichenbach/Self-Optimizing-Ad-Campaign" target="_blank" class="btn btn-project">View full project on GitHub</a>
-        <a href="https://self-optimizing-ad-campaign-cvyuyilsfhqbprtznidsjb.streamlit.app/" target="_blank" class="btn btn-project">View Live App</a>
+        <a href="https://github.com/ColbyRReichenbach/Self-Optimizing-Ad-Campaign" target="_blank" rel="noopener" class="btn btn-project">View full project on GitHub</a>
+        <a href="https://self-optimizing-ad-campaign-cvyuyilsfhqbprtznidsjb.streamlit.app/" target="_blank" rel="noopener" class="btn btn-project">View Live App</a>
       </div>
     </div>
   </div>
 </div>
-  
-  <div id="modal_proactive" class="modal"
-     data-markdown-source="project_previews/proactive_retention_agent.md"
+
+<div id="modal_proactive" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal_proactive_title"
      onclick="if(event.target === this){ closeModal('modal_proactive'); }">
   <div class="modal-content split">
-    <span class="close" onclick="closeModal('modal_proactive')">&times;</span>
+    <span class="close" onclick="closeModal('modal_proactive')" aria-label="Close Proactive Retention Agent modal">&times;</span>
     <div class="modal-left">
-      <img src="static/images/proactive_retention_agent.png" alt="Proactive Retention Agent Detail View">
+      <img src="static/images/proactive_retention_agent.png" alt="Workflow for proactive retention agent" loading="lazy" width="640" height="360">
     </div>
     <div class="modal-right">
-      <h3>Proactive Retention Agent</h3>
+      <h3 id="modal_proactive_title">Proactive Retention Agent</h3>
       <hr>
-      <div class="project-details-container">
-        <p>Loading project details...</p>
+      <div class="project-details-container" data-prefilled="true">
+        <p>A full-stack retention pipeline that blends XGBoost churn predictions, FastAPI deployment, and LLM-powered complaint summaries. The output is a prioritized retention queue that balances risk and lifetime value.</p>
+        <h4>Why it matters</h4>
+        <ul>
+          <li>Automates triage so retention teams spend time on the customers most likely to churn and most valuable to save.</li>
+          <li>Uses generative AI to classify sentiment and themes, giving agents ready-to-use context for outreach.</li>
+          <li>Demonstrates MLOps discipline with containerized models, orchestration, and automated reporting.</li>
+        </ul>
+        <h4>Tooling & methods</h4>
+        <p>Python, XGBoost, FastAPI, Docker, Google Gemini API, and retention analytics.</p>
       </div>
       <div class="modal-actions">
-        <a href="https://github.com/ColbyRReichenbach/proactive-retention-agent-build" target="_blank" class="btn btn-project">View full project on GitHub</a>
+        <a href="https://github.com/ColbyRReichenbach/proactive-retention-agent-build" target="_blank" rel="noopener" class="btn btn-project">View full project on GitHub</a>
       </div>
     </div>
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="static/script.js"></script>
-
 </body>
 </html>
