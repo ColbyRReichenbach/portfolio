@@ -49,13 +49,21 @@
         <span class="eyebrow">Data Analyst & Scientist</span>
         <h1>Scientific thinking meets practical analytics.</h1>
         <p class="intro">
-          I'm Colby, a biology-trained data professional who turns experimentation and messy data into stories teams can act on.
-          From marketing lift to customer retention, I help stakeholders see the signal - and what to do next.
+          Hi, I'm Colby. A first-generation college graduate from the University of North Carolina at Chapel Hill, my journey 
+          has been fueled by a restless curiosity. My academic studies, blending Biology with Data Science, trained 
+          me to use a hypothesis-driven, analytical approach to find answers in complex, messy data.</p>
+          <p class="intro"> 
+          I've found that analytics, machine learning, and new generative AI tools are the perfect way to itch 
+          my passion for continuous learning. I love digging into data to build solutions, uncover the "why" behind outcomes, 
+          and help people understand data through clear insights.</p>  
+          <p class="intro">
+          These projects are a showcase of that mindset. Welcome to my portfolio. I invite you to explore my work.</p>
+          
         </p>
         <ul class="hero-highlights">
-          <li>Designs lean analytics for marketing, ecommerce, and operations teams.</li>
+          <li>Enhanced analytics through data science, and technical proficiencies.</li>
           <li>Builds dashboards and decision tools that make complexity feel approachable.</li>
-          <li>Partners with collaborators to test ideas and communicate insight with clarity.</li>
+          <li>Integrates use of GenAI to accelerate workflows.</li>
         </ul>
         <div class="hero-cta">
           <a href="#portfolio" class="btn">Explore Projects</a>
@@ -65,13 +73,13 @@
           <a href="https://www.linkedin.com/in/colby-reichenbach/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://github.com/ColbyRReichenbach" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
           <a href="mailto:colbyrreichenbach@gmail.com" target="_blank" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          <a href="static/images/ColbyReichenbach_Resume_2025_updated.pdf" target="_blank" aria-label="Resume"><i class="fa-solid fa-file"></i></a>
+          <a href="static/images/ColbyReichenbach_Analyst_Resume.pdf" target="_blank" aria-label="Resume"><i class="fa-solid fa-file"></i></a>
         </div>
       </div>
       <div class="hero-spotlight">
         <div class="profile-frame">
           <img src="static/images/headshot.jpg" alt="Portrait of Colby Reichenbach" class="profile-pic">
-          <span class="availability">Open to analytics opportunities</span>
+          <span class="availability">Open to data-centric opportunities</span>
         </div>
         <div class="mini-card">
           <h3>Why it works</h3>
@@ -102,6 +110,7 @@
         <h3>Interactive Storytelling</h3>
         <p>Pairing dashboards and lightweight apps with narrative context so stakeholders understand the "so what."</p>
       </article>
+      </article>
     </div>
   </section>
 
@@ -124,6 +133,8 @@
       <span class="skill-chip">Data Storytelling</span>
       <span class="skill-chip">ETL Automation</span>
       <span class="skill-chip">Visualization</span>
+      <span class="skill-chip">GenAI / LLM Integration</span>
+      <span class="skill-chip">Cross-Functional Communication</span>
     </div>
   </section>
 
@@ -131,7 +142,7 @@
     <div class="section-heading">
       <span class="eyebrow">Selected Work</span>
       <h2>My Projects</h2>
-      <p>Curated projects where scientific curiosity and analytics rigor delivered clarity for partners.</p>
+      <p>Curated projects where scientific curiosity and analytics delivered clarity for partners.</p>
     </div>
     <div class="projects-grid">
 
@@ -180,6 +191,14 @@
         <div class="project-card-content">
           <h3>Self Optimizing Ad Campaign</h3>
           <p class="project-description">Automated campaign optimization workflow that adjusts spend based on live feedback.</p>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openModal('modal_proactive')">
+        <img src="static/images/proactive_retention_agent.png" alt="Proactive Retention Agent Preview" data-static-src="static/images/proactive_retention_agent.png">
+        <div class="project-card-content">
+          <h3>Proactive Retention Agent</h3>
+          <p class="project-description">Automated data analysis pipeline that creates a prioritized list for retention teams.</p>
         </div>
       </div>
 
@@ -325,6 +344,27 @@
       <div class="modal-actions">
         <a href="https://github.com/ColbyRReichenbach/Self-Optimizing-Ad-Campaign" target="_blank" class="btn btn-project">View full project on GitHub</a>
         <a href="https://self-optimizing-ad-campaign-cvyuyilsfhqbprtznidsjb.streamlit.app/" target="_blank" class="btn btn-project">View Live App</a>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <div id="modal_proactive" class="modal"
+     data-markdown-source="project_previews/proactive_retention_agent.md"
+     onclick="if(event.target === this){ closeModal('modal_proactive'); }">
+  <div class="modal-content split">
+    <span class="close" onclick="closeModal('modal_proactive')">&times;</span>
+    <div class="modal-left">
+      <img src="static/images/proactive_retention_agent.png" alt="Proactive Retention Agent Detail View">
+    </div>
+    <div class="modal-right">
+      <h3>Proactive Retention Agent</h3>
+      <hr>
+      <div class="project-details-container">
+        <p>Loading project details...</p>
+      </div>
+      <div class="modal-actions">
+        <a href="https://github.com/ColbyRReichenbach/proactive-retention-agent-build" target="_blank" class="btn btn-project">View full project on GitHub</a>
       </div>
     </div>
   </div>
